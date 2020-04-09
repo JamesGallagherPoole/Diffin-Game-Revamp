@@ -8,18 +8,6 @@ public class Car : MonoBehaviour
 
     public bool diff = false;
 
-    public GameObject engineStartSoundObject;
-    public GameObject idleSoundObject;
-    public GameObject diffSoundObject;
-    public GameObject limiterSoundObject;
-    public GameObject diffLoopSoundObject;
-
-    private AudioSource engineStartSound;
-    private AudioSource idleSound;
-    private AudioSource diffSound;
-    private AudioSource limiterSound;
-    private AudioSource diffLoopSound;
-
     private int maxSpeed = 130;
     private float maxRotate = 90;
     private float currentSpeed = 0;
@@ -27,38 +15,16 @@ public class Car : MonoBehaviour
 
     private int frictionCounter = 10;
 
-    private int limiterCounter = 300;
-
     // Start is called before the first frame update
     void Start()
     {
-        idleSound = idleSoundObject.GetComponent<AudioSource>();
-        diffSound = diffSoundObject.GetComponent<AudioSource>();
-        diffLoopSound = diffLoopSoundObject.GetComponent<AudioSource>();
-        limiterSound = limiterSoundObject.GetComponent<AudioSource>();
-        engineStartSound = engineStartSoundObject.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if (diff == true) {
-            limiterCounter -= 1;
-            if (idleSound.volume > .4f) {
-                idleSound.volume -= .1f;
-            }
-
-            if (diffLoopSound.volume < 1) {
-                diffLoopSound.volume += .1f;
-            }
-
-            if (limiterCounter == 0) {
-                diffLoopSound.volume = .4f;
-                if (limiterSound.volume < 1) {
-                    limiterSound.volume = 1;
-                }
-            }
-
             Handheld.Vibrate(); // GOWAN TA FUCK
             // Accelerate
             if (currentSpeed < maxSpeed) {
@@ -91,14 +57,6 @@ public class Car : MonoBehaviour
                 frictionCounter -= 1;
             }
         } else if (diff == false) {
-            limiterCounter = 1000;
-            limiterSound.volume = 0;
-            if (idleSound.volume < .8f) {
-                idleSound.volume += .2f;
-            }
-            if (diffLoopSound.volume > 0) {
-                diffLoopSound.volume -= .1f;
-            }
             if (currentSpeed > 0) {
                 currentSpeed -= 5;
             }
@@ -109,7 +67,6 @@ public class Car : MonoBehaviour
     public void getDiffin()
     {
         diff = true;
-        diffSound.Play();
     }
 
     public void haltDiffin()
