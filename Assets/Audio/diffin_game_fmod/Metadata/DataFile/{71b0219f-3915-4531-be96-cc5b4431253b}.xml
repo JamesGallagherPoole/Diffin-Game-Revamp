@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="DataFile" id="{71b0219f-3915-4531-be96-cc5b4431253b}">
+		<property name="assetPath">
+			<value>Music/Johnny Cash Was A Raver.mp3.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{94c45b20-3a6c-4cbb-a1f4-89f7d52afb45}</destination>
+		</relationship>
+	</object>
+</objects>

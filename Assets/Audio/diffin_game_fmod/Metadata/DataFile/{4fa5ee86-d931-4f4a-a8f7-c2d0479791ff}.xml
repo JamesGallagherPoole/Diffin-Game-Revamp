@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="DataFile" id="{4fa5ee86-d931-4f4a-a8f7-c2d0479791ff}">
+		<property name="assetPath">
+			<value>Car/twincam_hit_diff_true.mp3.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{94c45b20-3a6c-4cbb-a1f4-89f7d52afb45}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="DataFile" id="{2694b305-8f24-45a9-ad14-591109e2737d}">
+		<property name="assetPath">
+			<value>Hendy's VO mp3s/General Gameplay/general_10.mp3.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{94c45b20-3a6c-4cbb-a1f4-89f7d52afb45}</destination>
+		</relationship>
+	</object>
+</objects>
