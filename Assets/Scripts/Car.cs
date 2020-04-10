@@ -58,7 +58,7 @@ public class Car : MonoBehaviour
             }
         } else if (diff == false) {
             if (currentSpeed > 0) {
-                currentSpeed -= 5;
+                currentSpeed -= 1;
             }
         }
         transform.RotateAround(cone, Vector3.up, currentSpeed * Time.deltaTime);
