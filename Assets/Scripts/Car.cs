@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    private Vector3 cone = new Vector3(0.0f, 0.0f, 0.0f);
+    public GameObject cone;
 
     public bool diff = false;
 
@@ -61,7 +61,7 @@ public class Car : MonoBehaviour
                 currentSpeed -= 1;
             }
         }
-        transform.RotateAround(cone, Vector3.up, currentSpeed * Time.deltaTime);
+        transform.RotateAround(cone.transform.position, transform.up, currentSpeed * Time.deltaTime);
     }
 
     public void getDiffin()
