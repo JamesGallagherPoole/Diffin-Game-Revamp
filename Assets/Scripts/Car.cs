@@ -5,8 +5,9 @@ using UnityEngine;
 public class Car : MonoBehaviour
 {
     public GameObject cone;
+    public ParticleSystem smoke;
 
-    public bool diff = false;
+    [HideInInspector] public bool diff = false;
 
     private int maxSpeed = 130;
     private float maxRotate = 90;
@@ -59,6 +60,8 @@ public class Car : MonoBehaviour
         } else if (diff == false) {
             if (currentSpeed > 0) {
                 currentSpeed -= 1;
+            } else if (currentSpeed == 0) {
+                smoke.Stop();
             }
         }
         transform.RotateAround(cone.transform.position, transform.up, currentSpeed * Time.deltaTime);
@@ -67,6 +70,7 @@ public class Car : MonoBehaviour
     public void getDiffin()
     {
         diff = true;
+        smoke.Play();
     }
 
     public void haltDiffin()
