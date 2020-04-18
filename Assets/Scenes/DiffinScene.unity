@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116633365}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -15.6, z: -11.1}
+  m_LocalPosition: {x: 0, y: 1.7, z: 1.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1369302060}
@@ -931,7 +931,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 10
+      value: 30
       mode: 0
       spread: 0
       speed:
@@ -5295,6 +5295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 469843985}
+  - component: {fileID: 469843987}
   - component: {fileID: 469843986}
   m_Layer: 0
   m_Name: wheel04_pivot
@@ -5347,6 +5348,20 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!114 &469843987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469843984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1848074eee38bc247a4f6de3aa81ca60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1766043672}
+  skidmarksController: {fileID: 1330481623}
 --- !u!1001 &573601433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5908,6 +5923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1016101798}
+  - component: {fileID: 1016101800}
   - component: {fileID: 1016101799}
   m_Layer: 0
   m_Name: wheel03_pivot
@@ -5960,6 +5976,20 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!114 &1016101800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016101797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1848074eee38bc247a4f6de3aa81ca60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1766043672}
+  skidmarksController: {fileID: 1330481623}
 --- !u!1 &1023168918
 GameObject:
   m_ObjectHideFlags: 0
@@ -5969,6 +5999,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1023168919}
+  - component: {fileID: 1023168921}
   - component: {fileID: 1023168920}
   m_Layer: 0
   m_Name: wheel05_pivot
@@ -6021,6 +6052,20 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!114 &1023168921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023168918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1848074eee38bc247a4f6de3aa81ca60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1766043672}
+  skidmarksController: {fileID: 1330481623}
 --- !u!1 &1330481622
 GameObject:
   m_ObjectHideFlags: 0
@@ -6618,7 +6663,7 @@ GameObject:
   - component: {fileID: 1766043672}
   - component: {fileID: 1766043671}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CarPhysics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6663,7 +6708,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766043669}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 2000
   m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -6746,6 +6791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1969864071}
+  - component: {fileID: 1969864073}
   - component: {fileID: 1969864072}
   m_Layer: 0
   m_Name: wheel02_pivot
@@ -6798,6 +6844,20 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!114 &1969864073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969864070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1848074eee38bc247a4f6de3aa81ca60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1766043672}
+  skidmarksController: {fileID: 1330481623}
 --- !u!1 &2039246725
 GameObject:
   m_ObjectHideFlags: 0
@@ -6960,7 +7020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2039246727}
-  carObject: {fileID: 0}
+  carObject: {fileID: 8296172668315039801}
 --- !u!222 &2039246729
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7657,7 +7717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668315039801}
   m_LocalRotation: {x: -0, y: 0.91881984, z: -0, w: 0.39467716}
-  m_LocalPosition: {x: -26.5, y: 20.8, z: -775.3}
+  m_LocalPosition: {x: -13.3, y: -2.4, z: -682.9}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1766043670}
