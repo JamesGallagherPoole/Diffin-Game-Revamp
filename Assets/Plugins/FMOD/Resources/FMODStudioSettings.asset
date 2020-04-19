@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Audio/diffin_game_fmod/diffin_game_fmod.fspro
-  sourceBankPath: Assets\Audio\diffin_game_fmod\Build
+  sourceProjectPath: Assets/Audio/cathal_fmod/diffin_game.fspro
+  sourceBankPath: Assets\Audio\cathal_fmod\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -27,6 +27,8 @@ MonoBehaviour:
   LoggingLevel: 2
   SpeakerModeSettings:
   - Platform: 2
+    Value: 3
+  - Platform: 20
     Value: 3
   SampleRateSettings:
   - Platform: 1
@@ -77,10 +79,9 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - GameSounds
-  - GeneralCar
+  - Game Sounds
   - Hendys
   - Soundtrack
-  - TwinCam
   BanksToLoad: []
   LiveUpdatePort: 9264
+  EnableMemoryTracking: 0

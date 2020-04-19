@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{5cf16246-503e-4477-8d86-aa04d5f879cc}">
+		<property name="name">
+			<value>isFinishedCounting</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bd116834-fd62-4e86-95b2-e7b6bcbea2ca}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0d6adbf3-5ca7-40ba-a33a-76b52cfab89c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0d6adbf3-5ca7-40ba-a33a-76b52cfab89c}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

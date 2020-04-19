@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public GameObject carObject;
     private Car carScript;
-    private int score;
+    [HideInInspector] public int score;
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class Score : MonoBehaviour
     void FixedUpdate()
     {
         if (carScript.diff == true) {
-            score += Mathf.RoundToInt(Random.Range(1.0f, 100.0f)); 
+            score += Mathf.RoundToInt(Random.Range(1.0f, 10.0f)); 
             textComponent.text = score.ToString();
         }
     }
