@@ -5576,7 +5576,7 @@ Transform:
   m_Children:
   - {fileID: 945972693}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &371551043
 GameObject:
@@ -5625,7 +5625,6 @@ GameObject:
   - component: {fileID: 440189421}
   - component: {fileID: 440189419}
   - component: {fileID: 440189420}
-  - component: {fileID: 440189424}
   m_Layer: 5
   m_Name: StartMenuCanvas
   m_TagString: Untagged
@@ -5664,7 +5663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuCamera: {fileID: 963194225}
   gameCamera: {fileID: 306645599}
-  car: {fileID: 8296172668315039801}
+  car: {fileID: 836388244}
 --- !u!114 &440189421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5723,37 +5722,14 @@ RectTransform:
   - {fileID: 1617303684}
   - {fileID: 837529767}
   - {fileID: 584406033}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &440189424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440189418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/intro
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &448896553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6217,7 +6193,7 @@ MonoBehaviour:
   PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
-  TriggerOnce: 0
+  TriggerOnce: 1
   Preload: 0
   Params: []
   OverrideAttenuation: 0
@@ -6342,7 +6318,7 @@ Transform:
   - {fileID: 1628647311}
   - {fileID: 836388245}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &651525199
 GameObject:
@@ -6590,7 +6566,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &764339913
 GameObject:
@@ -6938,12 +6914,12 @@ GameObject:
   m_Component:
   - component: {fileID: 836388245}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &836388245
 Transform:
   m_ObjectHideFlags: 0
@@ -7436,7 +7412,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1452, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 440189423}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8427,7 +8404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369302059
 GameObject:
@@ -8701,7 +8678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Event: event:/cold
-  PlayEvent: 15
+  PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -8772,7 +8749,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1465732674
 MonoBehaviour:
@@ -8789,6 +8766,7 @@ MonoBehaviour:
   cone: {fileID: 333908712}
   smoke: {fileID: 116633368}
   diff: 0
+  hendyCommentary: event:/game_commentary
 --- !u!1 &1558094671
 GameObject:
   m_ObjectHideFlags: 0
@@ -8908,6 +8886,7 @@ GameObject:
   - component: {fileID: 1617303687}
   - component: {fileID: 1617303686}
   - component: {fileID: 1617303685}
+  - component: {fileID: 1617303688}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -9024,6 +9003,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617303683}
   m_CullTransparentMesh: 0
+--- !u!114 &1617303688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617303683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/hit_diff
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &1628647311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 53bb1f85fd1791f41a2b368aabb6990f,
@@ -13962,7 +13964,7 @@ RectTransform:
   - {fileID: 1181818499}
   - {fileID: 764339914}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14254,7 +14256,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868405879
 GameObject:
@@ -14697,7 +14699,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -240, y: -114}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039246727
 MonoBehaviour:
@@ -14746,8 +14748,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14842,7 +14844,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2041377675}
-  - component: {fileID: 2041377676}
   m_Layer: 0
   m_Name: PointsScreenTwinCam
   m_TagString: Untagged
@@ -14865,21 +14866,6 @@ Transform:
   m_Father: {fileID: 945972693}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 133.50801, z: 0}
---- !u!114 &2041377676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041377674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc644726cdf804e5ab10a79b1cea0548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cone: {fileID: 333908712}
-  smoke: {fileID: 1696001946}
-  diff: 0
 --- !u!1 &2082489506
 GameObject:
   m_ObjectHideFlags: 0
