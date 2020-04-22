@@ -127,6 +127,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{74fbfb31-44c5-4fa2-a9e0-1c80c7610279}">
+		<property name="volume">
+			<value>6</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -209,6 +212,7 @@
 	<object class="MixerBusEffectChain" id="{39f1bd1d-21a5-4c62-9756-5afa4ddcfd4e}">
 		<relationship name="effects">
 			<destination>{009bd4ee-e6a0-4302-9449-8cbe7abbd783}</destination>
+			<destination>{9cc10bc9-cafc-4b69-8ce2-db4f2bc56545}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8bc3d862-d522-4121-b00c-3a1b8b0289a3}" />
@@ -225,4 +229,38 @@
 	</object>
 	<object class="MixerBusFader" id="{adf7c9c4-39ca-412d-bd1f-30e2bebbc3ae}" />
 	<object class="MixerBusFader" id="{009bd4ee-e6a0-4302-9449-8cbe7abbd783}" />
+	<object class="PannerEffect" id="{9cc10bc9-cafc-4b69-8ce2-db4f2bc56545}">
+		<property name="stereoPan">
+			<value>42</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{62150017-5946-40da-aba3-6a349c2aef1a}</destination>
+		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{62150017-5946-40da-aba3-6a349c2aef1a}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>stereoPan</value>
+		</property>
+		<property name="attackTime">
+			<value>5615.38525</value>
+		</property>
+		<property name="attackShape">
+			<value>1</value>
+		</property>
+		<property name="peakValue">
+			<value>28.8888855</value>
+		</property>
+		<property name="holdTime">
+			<value>31153.832</value>
+		</property>
+		<property name="decayTime">
+			<value>60000</value>
+		</property>
+		<property name="decayShape">
+			<value>-1.00000048</value>
+		</property>
+		<property name="sustainValue">
+			<value>55.5555573</value>
+		</property>
+	</object>
 </objects>

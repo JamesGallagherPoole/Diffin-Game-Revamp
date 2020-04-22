@@ -23,9 +23,6 @@ public class PointsScreenCounter : MonoBehaviour
         currentScore = 0;
 
         scoreSound = FMODUnity.RuntimeManager.CreateInstance(ScoreCountEvent);
-        FMOD.Studio.PARAMETER_DESCRIPTION isFinishedCountingParameterDescription;
-        scoreEventDescription.getParameterDescriptionByName("isFinishedCounting", out isFinishedCountingParameterDescription);
-        isFinishedCountingParameterId = isFinishedCountingParameterDescription.id;
         scoreSound.start();
     }
 
@@ -38,7 +35,7 @@ public class PointsScreenCounter : MonoBehaviour
             textComponent.text = currentScore.ToString();
         } else
         {
-            scoreSound.setParameterByID(isFinishedCountingParameterId, 1.0f);
+            scoreSound.setParameterByName("isFinishedCounting", 1.0f);
         }
     }
 }
