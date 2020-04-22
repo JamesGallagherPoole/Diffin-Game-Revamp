@@ -13,13 +13,19 @@ public class Car : MonoBehaviour
     private float maxRotate = 90;
     private float currentSpeed = 0;
     private int currentRotate = 0;
-
     private int frictionCounter = 10;
+    private bool isHendyCounterCounting = false;
+
+    [FMODUnity.EventRef]
+    public string hendyCommentary = "";
+    FMOD.Studio.EventInstance hendyEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        // Coroutine for Commentary
+        hendyEvent = FMODUnity.RuntimeManager.CreateInstance(hendyCommentary);
+        var routine = StartCoroutine(startCommentaryTimer());
     }
 
     // Update is called once per frame
@@ -57,6 +63,13 @@ public class Car : MonoBehaviour
             } else {
                 frictionCounter -= 1;
             }
+
+            // Start timer again to count down to next commentary
+            if (isHendyCounterCounting == false)
+            {
+                var routine = StartCoroutine(startCommentaryTimer());
+            }
+
         } else if (diff == false) {
             if (currentSpeed > 0) {
                 currentSpeed -= 1;
@@ -77,4 +90,22 @@ public class Car : MonoBehaviour
     {
         diff = false;
     }
+
+    // Coroutine counter to play hendys at an interval
+    private IEnumerator startCommentaryTimer()
+    {
+        isHendyCounterCounting = true;
+        for (float i = 0; i <= 10.0f; i += Time.deltaTime)
+        {
+            Debug.Log(i);
+            if (i > 9.0)
+            {
+                hendyEvent.start();
+                isHendyCounterCounting = false;
+                break;
+            }
+            yield return null;
+        }
+    }
+
 }
