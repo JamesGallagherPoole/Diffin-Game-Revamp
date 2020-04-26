@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DataFile" id="{727b2e13-762a-4fcf-ac5b-9926175b23cc}">
+		<property name="assetPath">
+			<value>Car/twincam_engine_on_1.mp3.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72814363-126a-45fc-a9fb-b0e99a1b9aa8}</destination>
+		</relationship>
+	</object>
+</objects>

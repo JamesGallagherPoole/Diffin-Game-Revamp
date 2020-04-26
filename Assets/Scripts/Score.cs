@@ -29,4 +29,10 @@ public class Score : MonoBehaviour
             textComponent.text = score.ToString();
         }
     }
+
+    public void setToZero()
+    {
+        score = 0;
+        textComponent.text = score.ToString();
+    }
 }

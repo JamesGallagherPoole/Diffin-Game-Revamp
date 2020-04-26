@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="DataFile" id="{00c38fb1-3e98-4167-b992-504fc095302c}">
+		<property name="assetPath">
+			<value>Hendy's VO mp3s/Green Diesel Mode/.DS_Store</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72814363-126a-45fc-a9fb-b0e99a1b9aa8}</destination>
+		</relationship>
+	</object>
+</objects>

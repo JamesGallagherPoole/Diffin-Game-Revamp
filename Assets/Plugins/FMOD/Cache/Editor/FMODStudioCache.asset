@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/gdm_avail
   guid: fad09e0e7f8ea14ebfbdd957d0599799
   Banks:
-  - {fileID: 7786918538971224806}
+  - {fileID: 1820446088875221450}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -58,6 +58,57 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8228847578710417402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/point_noise/isFinishedCounting
+  m_EditorClassIdentifier: 
+  Name: isFinishedCounting
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-8187083803053557527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/soundtrack_cold/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-8156842425767656935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/soundtrack_johnny_cash/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-8008221536803956528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,8 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/kotc
   guid: cb256f3b6e8c8248b9312970a0bc4293
-  Banks:
-  - {fileID: -6131344112293876714}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -96,7 +146,7 @@ MonoBehaviour:
   Path: event:/gdm_acti sound
   guid: 2815944c39e57644bd1710e7d00845c6
   Banks:
-  - {fileID: 7786918538971224806}
+  - {fileID: 1820446088875221450}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -119,7 +169,7 @@ MonoBehaviour:
   Path: 'event:/gdm_activate '
   guid: 9125300e7d22c34097644ca43634d270
   Banks:
-  - {fileID: 7786918538971224806}
+  - {fileID: 1820446088875221450}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -127,6 +177,70 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 5544
+--- !u!114 &-7477412890206950560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/diffin_point/isFinishedCounting
+  m_EditorClassIdentifier: 
+  Name: isFinishedCounting
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-7376536720300283394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/soundtrack_johnny_cash
+  m_EditorClassIdentifier: 
+  Path: event:/soundtrack_johnny_cash
+  guid: b1335b192de9134884bc10ccbb0fa082
+  Banks:
+  - {fileID: 7557190854382226078}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1626451494928463014}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 111516
+--- !u!114 &-7048693981308373003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/gravel_loop
+  m_EditorClassIdentifier: 
+  Path: event:/gravel_loop
+  guid: 651edff033db4d47b7f91f170d9de84e
+  Banks:
+  - {fileID: 5202405787966655702}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 29560
 --- !u!114 &-6977292831369020117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +257,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6168603674325040959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,13 +272,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/cold
   guid: 5500ced824ce1b488c47ac26f59660b7
-  Banks:
-  - {fileID: 1438904689081021513}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6977292831369020117}
+  - {fileID: 4304590357252533317}
   MinDistance: 0
   MaxDistance: 0
   Length: 140000
@@ -185,7 +298,43 @@ MonoBehaviour:
   lastModified: 637231917797025748
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &-6101978922883202703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Soundtrack.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Soundtrack.bank
+  SubDir: 
+  lastModified: 637235141285208791
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6061899777299258645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637235196144311931
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-5760364464097649098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +351,68 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &-5425992520378804437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/TwinCam.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/TwinCam.bank
+  SubDir: 
+  lastModified: 637235196185711280
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-5321483924180967001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637235234292020093
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2412
   Exists: 1
+--- !u!114 &-5241628673834012107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/diff_loop_tc_3d
+  m_EditorClassIdentifier: 
+  Path: event:/diff_loop_tc_3d
+  guid: 477858993815c24f8c0332500a5a86c6
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10000
+  Length: 27640
 --- !u!114 &-4998360165543546888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +430,41 @@ MonoBehaviour:
   lastModified: 637228386570334123
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-4814993337486165429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/TwinCam.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/TwinCam.bank
+  SubDir: 
+  lastModified: 637235208919024359
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4751923005595221333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/soundtrack_cold/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &-4621537086174617852
 MonoBehaviour:
@@ -239,6 +484,83 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4362066684246129261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Hendys.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Hendys.bank
+  SubDir: 
+  lastModified: 637235208917681228
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4198748335487112984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Hendys.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Hendys.bank
+  SubDir: 
+  lastModified: 637235213588505448
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4078169618800229821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Hendys.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Hendys.bank
+  SubDir: 
+  lastModified: 637235141283697917
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3921254256228334472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/start_diff_tc
+  m_EditorClassIdentifier: 
+  Path: event:/start_diff_tc
+  guid: cd274f4dffd5dc419d48d1f0d6c3a741
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2136
 --- !u!114 &-3482868960865533293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +578,46 @@ MonoBehaviour:
   lastModified: 637231917184396049
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-3447280920055306068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/end_diff_tc
+  m_EditorClassIdentifier: 
+  Path: event:/end_diff_tc
+  guid: ca7b69a5bae670459899182cc758859b
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4344
+--- !u!114 &-3259498153252558056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/j_cash/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &-3229142029655842828
 MonoBehaviour:
@@ -292,7 +654,7 @@ MonoBehaviour:
   lastModified: 637231917797844925
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2913294026244058765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +672,92 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-2903614523162779575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/limiter_loop_tc_3d
+  m_EditorClassIdentifier: 
+  Path: event:/limiter_loop_tc_3d
+  guid: 5b093c0b8b708d45b47ca07273ed2974
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2152939063966674250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/soundtrack_johnny_cash/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-2035526201992380101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/limiter_loop_tc
+  m_EditorClassIdentifier: 
+  Path: event:/limiter_loop_tc
+  guid: 0ba42a5710badb42b4dfa0ff72a4dac7
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 46200
+--- !u!114 &-1812233669284140038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/idle_loop_tc
+  m_EditorClassIdentifier: 
+  Path: event:/idle_loop_tc
+  guid: 9c2f31617a872647a598c24364e3c902
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 10320
 --- !u!114 &-1788024383398074238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +776,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1474998040310718425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Game Sounds.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Game Sounds.bank
+  SubDir: 
+  lastModified: 637235213587995976
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1025782340557698646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +827,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-990835586348301090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +843,7 @@ MonoBehaviour:
   Path: event:/gdm_commentary
   guid: 683491a1deb20043b84cc3c11decd682
   Banks:
-  - {fileID: -6131344112293876714}
+  - {fileID: 939522627663129862}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -385,6 +851,65 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2500
+--- !u!114 &-837745004382291941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/diff_loop_tc
+  m_EditorClassIdentifier: 
+  Path: event:/diff_loop_tc
+  guid: ad60682763a18542b569588a87e8d017
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 27640
+--- !u!114 &-800318757692444027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Game Sounds.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Game Sounds.bank
+  SubDir: 
+  lastModified: 637235208916941988
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-708257584760228094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/CarGeneral.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/CarGeneral.bank
+  SubDir: 
+  lastModified: 637235213590183738
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-675105010241156019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +925,7 @@ MonoBehaviour:
   Path: event:/game_commentary
   guid: 5d35a55483716c43a67e6cec9c036a84
   Banks:
-  - {fileID: -6131344112293876714}
+  - {fileID: 939522627663129862}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -408,6 +933,134 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 5000
+--- !u!114 &-483332403168660724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/soundtrack_cold
+  m_EditorClassIdentifier: 
+  Path: event:/soundtrack_cold
+  guid: 5500ced824ce1b488c47ac26f59660b7
+  Banks:
+  - {fileID: 5070084229972281801}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5860722621498264529}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 140000
+--- !u!114 &-423676190224178675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/start_diff_tc_3d
+  m_EditorClassIdentifier: 
+  Path: event:/start_diff_tc_3d
+  guid: 70a93c520c630b4bbc02de9c11976fa8
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2136
+--- !u!114 &-355267899009965712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/soundtrack_johnny_cash/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-244528540154631015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/engine_on_tc
+  m_EditorClassIdentifier: 
+  Path: event:/engine_on_tc
+  guid: 1ca8b76f330dc640b85fa27b753fc5a9
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3141
+--- !u!114 &-166108108196307484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/idle_loop_tc_3d
+  m_EditorClassIdentifier: 
+  Path: event:/idle_loop_tc_3d
+  guid: a378cd1c08e40348b78b252baabadfb1
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10320
+--- !u!114 &-66936137956899518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Game Sounds.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Game Sounds.bank
+  SubDir: 
+  lastModified: 637235141283178443
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,30 +1074,72 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1715643981157524515}
-  - {fileID: 7786918538971224806}
-  - {fileID: -6131344112293876714}
-  - {fileID: 1438904689081021513}
-  - {fileID: -2960361735973448702}
+  - {fileID: -5321483924180967001}
+  - {fileID: 5202405787966655702}
+  - {fileID: 1820446088875221450}
+  - {fileID: 939522627663129862}
+  - {fileID: 5070084229972281801}
+  - {fileID: 7557190854382226078}
+  - {fileID: 1750351101329200173}
   EditorEvents:
   - {fileID: 8757045418153626412}
-  - {fileID: 4633238903155341778}
   - {fileID: -7900255938619795004}
   - {fileID: -7734862491128662079}
-  - {fileID: 3551216264584195869}
   - {fileID: -9126822132294524932}
   - {fileID: -675105010241156019}
   - {fileID: -990835586348301090}
-  - {fileID: -8008221536803956528}
-  - {fileID: -6168603674325040959}
-  - {fileID: 1387281213119746003}
+  - {fileID: 206900648294467582}
+  - {fileID: 1360369534779832585}
+  - {fileID: 1772188876919485471}
+  - {fileID: -483332403168660724}
+  - {fileID: -7376536720300283394}
+  - {fileID: -2035526201992380101}
+  - {fileID: -244528540154631015}
+  - {fileID: 5572566716205670267}
+  - {fileID: -7048693981308373003}
+  - {fileID: -1812233669284140038}
+  - {fileID: -837745004382291941}
+  - {fileID: -3447280920055306068}
+  - {fileID: -3921254256228334472}
+  - {fileID: 6152482346729208088}
+  - {fileID: 5905093985535967537}
+  - {fileID: 904149988475762922}
+  - {fileID: -5241628673834012107}
+  - {fileID: -2903614523162779575}
+  - {fileID: 5420108337887542893}
+  - {fileID: -166108108196307484}
+  - {fileID: -423676190224178675}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1438904689081021513}
+  - {fileID: 5070084229972281801}
   StringsBanks:
-  - {fileID: 1715643981157524515}
-  stringsBankWriteTime: 637231917797535281
+  - {fileID: -5321483924180967001}
+  stringsBankWriteTime: 637235234292020093
   cacheVersion: 3
+--- !u!114 &206900648294467582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/point_noise
+  m_EditorClassIdentifier: 
+  Path: event:/point_noise
+  guid: 98531aa9bf53a241905c6f4c1e408f6c
+  Banks:
+  - {fileID: 1820446088875221450}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6856227545768527808}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2063
 --- !u!114 &292614966927386928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,6 +1158,47 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &904149988475762922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/engine_on_tc_3d
+  m_EditorClassIdentifier: 
+  Path: event:/engine_on_tc_3d
+  guid: 38cbf37d90c82f4f94c6d841f4e28e7e
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3141
+--- !u!114 &939522627663129862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Hendys.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Hendys.bank
+  SubDir: 
+  lastModified: 637235234291340779
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1194360364358531748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +1217,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &1360369534779832585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/king_of_the_cone
+  m_EditorClassIdentifier: 
+  Path: event:/king_of_the_cone
+  guid: cb256f3b6e8c8248b9312970a0bc4293
+  Banks:
+  - {fileID: 939522627663129862}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4075
 --- !u!114 &1387281213119746003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,13 +1254,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/j_cash
   guid: b1335b192de9134884bc10ccbb0fa082
-  Banks:
-  - {fileID: -2960361735973448702}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -1006289598254208270}
+  - {fileID: -3259498153252558056}
   MinDistance: 0
   MaxDistance: 0
   Length: 111516
@@ -522,6 +1280,23 @@ MonoBehaviour:
   lastModified: 637231917797465304
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &1626451494928463014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/soundtrack_johnny_cash/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &1715643981157524515
 MonoBehaviour:
@@ -542,7 +1317,120 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1552
+  Exists: 0
+--- !u!114 &1750351101329200173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/TwinCam.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/TwinCam.bank
+  SubDir: 
+  lastModified: 637235234292929160
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
+--- !u!114 &1772188876919485471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/game_intro
+  m_EditorClassIdentifier: 
+  Path: event:/game_intro
+  guid: fe69ef78d59f444aaf7e48ddf5549aae
+  Banks:
+  - {fileID: 939522627663129862}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &1820446088875221450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Game Sounds.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Game Sounds.bank
+  SubDir: 
+  lastModified: 637235234290731405
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1881138094727949233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637235141284287307
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1922451549886045732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/CarGeneral.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/CarGeneral.bank
+  SubDir: 
+  lastModified: 637235208919483882
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2312538776047622228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Soundtrack.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Soundtrack.bank
+  SubDir: 
+  lastModified: 637235213589314624
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &2880821742875278339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,6 +1448,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &2984741606405680680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Soundtrack.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Soundtrack.bank
+  SubDir: 
+  lastModified: 637235208918630264
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &3551216264584195869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,16 +1480,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/diffin_point
   guid: 98531aa9bf53a241905c6f4c1e408f6c
-  Banks:
-  - {fileID: 7786918538971224806}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -5760364464097649098}
+  - {fileID: -7477412890206950560}
   MinDistance: 0
   MaxDistance: 0
-  Length: 1715
+  Length: 2063
 --- !u!114 &3933657039387253041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +1500,40 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/j_cash/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &4304590357252533317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/cold/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &4467335294359968955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/soundtrack_cold/isGreenDieselMode
   m_EditorClassIdentifier: 
   Name: isGreenDieselMode
   Min: 0
@@ -615,8 +1554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/intro
   guid: fe69ef78d59f444aaf7e48ddf5549aae
-  Banks:
-  - {fileID: -6131344112293876714}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -624,6 +1562,240 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &4658890477616076933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Soundtrack.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Soundtrack.bank
+  SubDir: 
+  lastModified: 637235196172311029
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &4833762327970402801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Hendys.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Hendys.bank
+  SubDir: 
+  lastModified: 637235196113367534
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5070084229972281801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637235234291910203
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5202405787966655702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/CarGeneral.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/CarGeneral.bank
+  SubDir: 
+  lastModified: 637235234293348735
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5420108337887542893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/end_diff_tc_3d
+  m_EditorClassIdentifier: 
+  Path: event:/end_diff_tc_3d
+  guid: 91fb1fbba72d3f43a1e7198c72a14c7f
+  Banks:
+  - {fileID: 1750351101329200173}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4344
+--- !u!114 &5572566716205670267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/gravel_break
+  m_EditorClassIdentifier: 
+  Path: event:/gravel_break
+  guid: 540941c5a99ab54bb0dfd32b1499c389
+  Banks:
+  - {fileID: 5202405787966655702}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5000
+--- !u!114 &5596210454020685648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Game Sounds.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Game Sounds.bank
+  SubDir: 
+  lastModified: 637235196104577735
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5860722621498264529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/soundtrack_cold/isGreenDieselMode
+  m_EditorClassIdentifier: 
+  Name: isGreenDieselMode
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &5905093985535967537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/gravel_break_3d
+  m_EditorClassIdentifier: 
+  Path: event:/gravel_break_3d
+  guid: 903b41304421da47a38c0f2a25966e27
+  Banks:
+  - {fileID: 5202405787966655702}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &6076115250900641441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/point_noise/isFinishedCounting
+  m_EditorClassIdentifier: 
+  Name: isFinishedCounting
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &6107576521163003767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637235213588945009
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6152482346729208088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/gravel_loop_3d
+  m_EditorClassIdentifier: 
+  Path: event:/gravel_loop_3d
+  guid: 6a13ba87f35f844e83bea0a6b1c202ec
+  Banks:
+  - {fileID: 5202405787966655702}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 29560
 --- !u!114 &6670171382967012357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,6 +1832,77 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6856227545768527808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/point_noise/isFinishedCounting
+  m_EditorClassIdentifier: 
+  Name: isFinishedCounting
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6915172554963218545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/TwinCam.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/TwinCam.bank
+  SubDir: 
+  lastModified: 637235213589784177
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7339805794145535350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637235208918170737
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7557190854382226078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Soundtrack.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/diffin_game/Build/Desktop/Soundtrack.bank
+  SubDir: 
+  lastModified: 637235234292379727
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &7786918538971224806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,7 +1920,7 @@ MonoBehaviour:
   lastModified: 637231917796516277
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8186734126034224945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,7 +1954,7 @@ MonoBehaviour:
   Path: event:/hit_diff
   guid: d49be24b477c554b8c824a133303b1f5
   Banks:
-  - {fileID: -6131344112293876714}
+  - {fileID: 939522627663129862}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -730,6 +1973,23 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/diffin_point/isFinishedCounting
+  m_EditorClassIdentifier: 
+  Name: isFinishedCounting
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &9019013016495298017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/point_noise/isFinishedCounting
   m_EditorClassIdentifier: 
   Name: isFinishedCounting
   Min: 0

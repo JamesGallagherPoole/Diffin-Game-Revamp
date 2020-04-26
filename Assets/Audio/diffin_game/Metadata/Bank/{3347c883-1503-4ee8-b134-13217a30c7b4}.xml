@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{3347c883-1503-4ee8-b134-13217a30c7b4}">
+		<property name="name">
+			<value>TwinCam</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6534e635-bb8d-4f93-9ba4-49edeccd8928}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -19,11 +19,6 @@ public class PointsScreenCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        totalScore = score.score;
-        currentScore = 0;
-
-        scoreSound = FMODUnity.RuntimeManager.CreateInstance(ScoreCountEvent);
-        scoreSound.start();
     }
 
     // Update is called once per frame
@@ -31,11 +26,24 @@ public class PointsScreenCounter : MonoBehaviour
     {
         if (currentScore < totalScore)
         {
-            currentScore = currentScore + 10;
+            currentScore = currentScore + 50;
             textComponent.text = currentScore.ToString();
         } else
         {
-            scoreSound.setParameterByName("isFinishedCounting", 1.0f);
+            endCount();
         }
+    }
+
+    public void startCount()
+    {
+        totalScore = score.score;
+        currentScore = 0;
+        scoreSound = FMODUnity.RuntimeManager.CreateInstance(ScoreCountEvent);
+        scoreSound.start();
+    }
+
+    public void endCount()
+    {
+        scoreSound.setParameterByName("isFinishedCounting", 1.0f);
     }
 }
