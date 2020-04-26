@@ -25,19 +25,31 @@ public class Car : MonoBehaviour
     FMOD.Studio.EventInstance hendyEvent;
 
     [FMODUnity.EventRef]
+    public string engineStart = "";
+    FMOD.Studio.EventInstance engineStartEvent;
+
+    [FMODUnity.EventRef]
+    public string startDiff = "";
+    FMOD.Studio.EventInstance startDiffEvent;
+
+    [FMODUnity.EventRef]
     public string diffLoop = "";
     FMOD.Studio.EventInstance diffLoopEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Coroutine for Commentary
+        // Load sound events
+        diffLoopEvent = FMODUnity.RuntimeManager.CreateInstance(diffLoop);
+        engineStartEvent = FMODUnity.RuntimeManager.CreateInstance(engineStart);
+        startDiffEvent = FMODUnity.RuntimeManager.CreateInstance(startDiff);
         hendyEvent = FMODUnity.RuntimeManager.CreateInstance(hendyCommentary);
+
+        engineStartEvent.start();
+
+        // Coroutine for Commentary
         var routine = StartCoroutine(startCommentaryTimer());
 
-        diffLoopEvent = FMODUnity.RuntimeManager.CreateInstance(diffLoop);
-
-        diffLoopEvent.start();
         originalPosition = transform.position;
         originalRotation = transform.rotation;
     }
@@ -45,9 +57,13 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        engineStartEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        startDiffEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         diffLoopEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
         if (diff == true) {
-            //Handheld.Vibrate(); // GOWAN TA FUCK
+            startDiffEvent.start();
+            Handheld.Vibrate(); // GOWAN TA FUCK
             // Accelerate
             if (currentSpeed < maxSpeed) {
                 currentSpeed += 1;
