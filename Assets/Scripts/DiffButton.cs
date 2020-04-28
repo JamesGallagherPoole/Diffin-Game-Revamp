@@ -31,4 +31,9 @@ public class DiffButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         Debug.Log(this.gameObject.name + " Was Upped.");  
         diffinCarScript.haltDiffin();
     }
+
+    public void stopDiffin()
+    {
+        diffinCarScript.haltDiffin();
+    }
 }

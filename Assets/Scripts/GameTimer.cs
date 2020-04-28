@@ -13,11 +13,12 @@ public class GameTimer : MonoBehaviour
     public GameObject gameCamera;
     public GameObject pointsScreenCamera;
     public PointsScreenCounter pointsScreenCounter;
+    public DiffButton diffButton;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameTime = 30;
+        gameTime = 60;
         resetTimer();
     }
 
@@ -31,6 +32,7 @@ public class GameTimer : MonoBehaviour
             textComponent.text = currentTimeLeftRound.ToString();
         } else if (currentTimeLeft <= 0)
         {
+            diffButton.stopDiffin();
             gameCamera.SetActive(false);
             pointsScreenCamera.SetActive(true);
             pointsScreenCounter.startCount();

@@ -36,6 +36,10 @@ public class Car : MonoBehaviour
     public string diffLoop = "";
     FMOD.Studio.EventInstance diffLoopEvent;
 
+    [FMODUnity.EventRef]
+    public string endDiff = "";
+    FMOD.Studio.EventInstance endDiffEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,7 @@ public class Car : MonoBehaviour
         diffLoopEvent = FMODUnity.RuntimeManager.CreateInstance(diffLoop);
         engineStartEvent = FMODUnity.RuntimeManager.CreateInstance(engineStart);
         startDiffEvent = FMODUnity.RuntimeManager.CreateInstance(startDiff);
+        endDiffEvent = FMODUnity.RuntimeManager.CreateInstance(endDiff);
         hendyEvent = FMODUnity.RuntimeManager.CreateInstance(hendyCommentary);
 
         engineStartEvent.start();
@@ -60,9 +65,11 @@ public class Car : MonoBehaviour
         engineStartEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         startDiffEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         diffLoopEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        engineStartEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        endDiffEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
 
         if (diff == true) {
-            startDiffEvent.start();
             Handheld.Vibrate(); // GOWAN TA FUCK
             // Accelerate
             if (currentSpeed < maxSpeed) {
@@ -71,23 +78,20 @@ public class Car : MonoBehaviour
 
             // Rotate car based on phone rotation
             if (Input.acceleration.x > 0) {
-                if (currentRotate < maxRotate) {
-                    if (rotateIncrement < 1)
-                    {
-                        rotateIncrement += .05f;
-                    }
-                    currentRotate += rotateIncrement;
-                    transform.Rotate(0, 1, 0);
+                if (rotateIncrement < 1)
+                {
+                    rotateIncrement += .05f;
                 }
+                currentRotate += rotateIncrement;
+                transform.Rotate(0, 1, 0);
             } else if (Input.acceleration.x < 0) {
-                if (currentRotate > -maxRotate) {
-                    if (rotateIncrement > -1)
-                    {
-                        rotateIncrement -= .05f;
-                    }
-                    currentRotate -= rotateIncrement;
-                    transform.Rotate(0, -1, 0);
+                if (rotateIncrement > -1)
+                {
+                    rotateIncrement -= .05f;
                 }
+                currentRotate -= rotateIncrement;
+                transform.Rotate(0, -1, 0);
+
             }
 
             // Move the position of the car slightly over time
@@ -141,11 +145,14 @@ public class Car : MonoBehaviour
     {
         diff = true;
         smoke.Play();
+        startDiffEvent.start();
     }
 
     public void haltDiffin()
     {
         diff = false;
+        startDiffEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        endDiffEvent.start();
     }
 
     // Coroutine counter to play hendys at an interval
