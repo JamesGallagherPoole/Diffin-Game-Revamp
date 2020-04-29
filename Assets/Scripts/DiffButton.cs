@@ -11,7 +11,6 @@ public class DiffButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     void Start()
     {
         diffinCarScript = diffinCar.GetComponent<Car>();
-        
     }
 
     // Update is called once per frame

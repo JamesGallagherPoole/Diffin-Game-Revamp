@@ -13,7 +13,7 @@ public class Car : MonoBehaviour
     private Quaternion originalRotation;
 
     private int maxSpeed = 130;
-    private float maxRotate = 360;
+    private int maxRotate = 60;
     private float currentSpeed = 0;
     private float currentRotate = 0;
     private float rotateIncrement = 0;
@@ -40,6 +40,15 @@ public class Car : MonoBehaviour
     public string endDiff = "";
     FMOD.Studio.EventInstance endDiffEvent;
 
+    [FMODUnity.EventRef]
+    public string gravelSound = "";
+    FMOD.Studio.EventInstance gravelSoundEvent;
+   
+    [FMODUnity.EventRef]
+    public string gravelBreakSound = "";
+    FMOD.Studio.EventInstance gravelBreakSoundEvent;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +57,8 @@ public class Car : MonoBehaviour
         engineStartEvent = FMODUnity.RuntimeManager.CreateInstance(engineStart);
         startDiffEvent = FMODUnity.RuntimeManager.CreateInstance(startDiff);
         endDiffEvent = FMODUnity.RuntimeManager.CreateInstance(endDiff);
+        gravelSoundEvent = FMODUnity.RuntimeManager.CreateInstance(gravelSound);
+        gravelBreakSoundEvent = FMODUnity.RuntimeManager.CreateInstance(gravelBreakSound);
         hendyEvent = FMODUnity.RuntimeManager.CreateInstance(hendyCommentary);
 
         engineStartEvent.start();
@@ -67,10 +78,12 @@ public class Car : MonoBehaviour
         diffLoopEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         engineStartEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         endDiffEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-
+        gravelSoundEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        gravelBreakSoundEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
 
         if (diff == true) {
-            Handheld.Vibrate(); // GOWAN TA FUCK
+            Debug.Log(currentRotate);
+            //Handheld.Vibrate(); // GOWAN TA FUCK
             // Accelerate
             if (currentSpeed < maxSpeed) {
                 currentSpeed += 1;
@@ -78,38 +91,48 @@ public class Car : MonoBehaviour
 
             // Rotate car based on phone rotation
             if (Input.acceleration.x > 0) {
-                if (rotateIncrement < 1)
+                if (currentRotate < maxRotate )
                 {
-                    rotateIncrement += .05f;
+                    if (rotateIncrement < 1)
+                    {
+                        rotateIncrement += .05f;
+                    }
+                    currentRotate += rotateIncrement;
                 }
-                currentRotate += rotateIncrement;
                 transform.Rotate(0, 1, 0);
             } else if (Input.acceleration.x < 0) {
-                if (rotateIncrement > -1)
+                if (currentRotate > -maxRotate)
                 {
-                    rotateIncrement -= .05f;
+                    if (rotateIncrement > -1)
+                    {
+                        rotateIncrement -= .05f;
+                    }
+                    currentRotate -= rotateIncrement;
                 }
-                currentRotate -= rotateIncrement;
                 transform.Rotate(0, -1, 0);
 
             }
-
+            /*
             // Move the position of the car slightly over time
             Debug.Log(Input.acceleration.z);
-            if (Input.acceleration.z > -1f & Input.acceleration.z < -.7f)
+            if (Input.acceleration.z > -.9f & Input.acceleration.z < -.7f)
             {
+                Debug.Log("STAY");
                 // Stay at current pos
             }
-            else if (Input.acceleration.z < -1f)
+            else if (Input.acceleration.z < -.9f)
             {
-                transform.Translate(-0.01f, 0, 0);
-                transform.Translate(0, 0, -0.01f);
+                Debug.Log("Move out");
+                transform.Translate(-.8f, 0, 0);
+                transform.Translate(0, 0, -.8f);
             }
             else if (Input.acceleration.z > -.7f)
             {
-                transform.Translate(0.01f, 0, 0);
-                transform.Translate(0, 0, 0.01f);
+                Debug.Log("Move in");
+                transform.Translate(.5f, 0, 0);
+                transform.Translate(0, 0, .5f);
             }
+            */
 
             // Create some friction
             if (frictionCounter == 1) {
@@ -131,9 +154,8 @@ public class Car : MonoBehaviour
             }
 
         } else if (diff == false) {
-            Debug.Log("X: " + Input.acceleration.x + " Y: " + Input.acceleration.y + " Z: " + Input.acceleration.z);
             if (currentSpeed > 0) {
-                currentSpeed -= 1;
+                currentSpeed -= 3;
             } else if (currentSpeed == 0) {
                 smoke.Stop();
             }
@@ -146,13 +168,16 @@ public class Car : MonoBehaviour
         diff = true;
         smoke.Play();
         startDiffEvent.start();
+        gravelSoundEvent.start();
     }
 
     public void haltDiffin()
     {
         diff = false;
         startDiffEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        endDiffEvent.start();
+        gravelSoundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //endDiffEvent.start();
+        gravelBreakSoundEvent.start();
     }
 
     // Coroutine counter to play hendys at an interval
