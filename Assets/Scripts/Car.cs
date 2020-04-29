@@ -12,7 +12,7 @@ public class Car : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
-    private int maxSpeed = 130;
+    public int maxSpeed = 130;
     private int maxRotate = 60;
     private float currentSpeed = 0;
     private float currentRotate = 0;
