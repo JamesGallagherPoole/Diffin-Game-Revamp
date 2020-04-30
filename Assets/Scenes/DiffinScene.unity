@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 116633366}
   - component: {fileID: 116633368}
   - component: {fileID: 116633367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5373,7 +5373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232268756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OtherStuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5632,6 +5632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 306645602}
   - component: {fileID: 306645601}
+  - component: {fileID: 306645604}
   - component: {fileID: 306645600}
   - component: {fileID: 306645603}
   m_Layer: 0
@@ -5731,6 +5732,66 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &306645604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306645599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 306645602}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!54 &333908715
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6097,7 +6158,7 @@ GameObject:
   - component: {fileID: 469843985}
   - component: {fileID: 469843987}
   - component: {fileID: 469843986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel04_pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6483,8 +6544,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644503033}
   m_Enabled: 1
-  m_SortingLayerID: -222871203
-  m_SortingLayer: 3
+  m_SortingLayerID: 672861845
+  m_SortingLayer: 1
   m_SortingOrder: 0
 --- !u!4 &644503035
 Transform:
@@ -8229,7 +8290,7 @@ GameObject:
   - component: {fileID: 1016101798}
   - component: {fileID: 1016101800}
   - component: {fileID: 1016101799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel03_pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8305,7 +8366,7 @@ GameObject:
   - component: {fileID: 1023168919}
   - component: {fileID: 1023168921}
   - component: {fileID: 1023168920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel05_pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9178,7 +9239,7 @@ GameObject:
   - component: {fileID: 1369302060}
   - component: {fileID: 1369302063}
   - component: {fileID: 1369302062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9607,7 +9668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1594127625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WheelColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10041,7 +10102,7 @@ GameObject:
   - component: {fileID: 1766043670}
   - component: {fileID: 1766043672}
   - component: {fileID: 1766043671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CarPhysics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10449,8 +10510,10 @@ MonoBehaviour:
   car: {fileID: 1465732674}
   button: {fileID: 1895056232}
   soundtrack: {fileID: 1429253879}
+  smoke: {fileID: 116633368}
   greenDieselAvailable: event:/gdm_avail
   greenDieselEngage: event:/gdm_acti sound
+  greenDieselHendy: 'event:/gdm_activate '
 --- !u!114 &1895056234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10750,7 +10813,7 @@ GameObject:
   - component: {fileID: 1969864071}
   - component: {fileID: 1969864073}
   - component: {fileID: 1969864072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel02_pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11201,7 +11264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2082489507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11597,7 +11660,7 @@ GameObject:
   - component: {fileID: 9147700562557298205}
   - component: {fileID: 3964964334510464790}
   - component: {fileID: 3451916585755283551}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel02_pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11631,7 +11694,7 @@ GameObject:
   - component: {fileID: 6304931041225564510}
   - component: {fileID: 4450371591359043303}
   - component: {fileID: 2307418614827035906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: door_rf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11649,7 +11712,7 @@ GameObject:
   - component: {fileID: 6640922879535163104}
   - component: {fileID: 769753281509619397}
   - component: {fileID: 296373640787579725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel03_pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11755,7 +11818,7 @@ GameObject:
   - component: {fileID: 1008386225890531544}
   - component: {fileID: 9049953438078692063}
   - component: {fileID: 5717814972548874255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel05_pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11795,7 +11858,7 @@ GameObject:
   - component: {fileID: 8117007686421660721}
   - component: {fileID: 4564762210205603205}
   - component: {fileID: 2277513739707079862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: door_lf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11904,7 +11967,7 @@ GameObject:
   - component: {fileID: 8796006500878905259}
   - component: {fileID: 6306217857693692181}
   - component: {fileID: 7400639958375433710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glasses01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11922,7 +11985,7 @@ GameObject:
   - component: {fileID: 311897365020534749}
   - component: {fileID: 3178882474347476178}
   - component: {fileID: 7142813847555767385}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11948,7 +12011,7 @@ GameObject:
   - component: {fileID: 8178887561746659675}
   - component: {fileID: 1845809394824914501}
   - component: {fileID: 6228588092777260891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: misc_a01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12013,7 +12076,7 @@ GameObject:
   - component: {fileID: 6827344635999526350}
   - component: {fileID: 6205643451924473099}
   - component: {fileID: 1632941419483471482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel04_pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12047,7 +12110,7 @@ GameObject:
   - component: {fileID: 9017350545706053867}
   - component: {fileID: 2551055861823326352}
   - component: {fileID: 467132264376852339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bonnet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12094,7 +12157,7 @@ GameObject:
   - component: {fileID: 6692081372956941904}
   - component: {fileID: 1239577060619147638}
   - component: {fileID: 5875093958752051559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: windscreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12442,7 +12505,7 @@ GameObject:
   - component: {fileID: 8639100816907468553}
   - component: {fileID: 1841478769845344673}
   - component: {fileID: 6493758901673516111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bump_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12527,7 +12590,7 @@ GameObject:
   - component: {fileID: 2729289311238885721}
   - component: {fileID: 1571609503803125400}
   - component: {fileID: 3346114700603079762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: boot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12545,7 +12608,7 @@ GameObject:
   - component: {fileID: 1636233673748158278}
   - component: {fileID: 8527638504240569950}
   - component: {fileID: 4323068323352952021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bump_rear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12562,13 +12625,31 @@ GameObject:
   m_Component:
   - component: {fileID: 5006512736216943146}
   - component: {fileID: 1465732674}
-  m_Layer: 0
+  - component: {fileID: 8296172668315039802}
+  m_Layer: 8
   m_Name: Corolla_AE86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8296172668315039802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668315039801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 1c48c263757064742a3b53c7651c9e19, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &8296172668617437072
 GameObject:
   m_ObjectHideFlags: 0

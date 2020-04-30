@@ -82,8 +82,7 @@ public class Car : MonoBehaviour
         gravelBreakSoundEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
 
         if (diff == true) {
-            Debug.Log(currentRotate);
-            //Handheld.Vibrate(); // GOWAN TA FUCK
+            Handheld.Vibrate(); // GOWAN TA FUCK
             // Accelerate
             if (currentSpeed < maxSpeed) {
                 currentSpeed += 1;
