@@ -7,7 +7,7 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public StartGame startGameManager;
 
-    public float loadingLength = 5f;
+    public float loadingLength = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +34,6 @@ public class LevelLoader : MonoBehaviour
 
         // Wait for transition
         yield return new WaitForSeconds(1);
-
-        // Wait on Loading
-        yield return new WaitForSeconds(loadingLength);
 
         // Change Cameras
         startGameManager.startGame();
