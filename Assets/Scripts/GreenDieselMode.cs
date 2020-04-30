@@ -8,6 +8,7 @@ public class GreenDieselMode : MonoBehaviour
     public Animator animator;
     public Car car;
     public Button button;
+    public Soundtrack soundtrack;
 
     private bool isAvailable = false;
     private float timerCounter = 0;
@@ -53,5 +54,6 @@ public class GreenDieselMode : MonoBehaviour
         animator.SetFloat("GreenDieselTank", 85f);
         greenDieselEngageEvent.start();
         car.maxSpeed = 200;
+        soundtrack.startGreenDieselMode();
     }
 }
