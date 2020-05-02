@@ -6,6 +6,7 @@ public class GameCamera : MonoBehaviour
 {
     public Animator animator;
     public Transform car;
+    public Transform inCarCam;
 
     private int shotNumber = 0;
     // Start is called before the first frame update
@@ -18,8 +19,10 @@ public class GameCamera : MonoBehaviour
     void Update()
     {
         if (shotNumber == 3) {
-            Debug.Log("HERE");
             transform.LookAt(car);
+        } else if (shotNumber == 6) {
+            transform.position = inCarCam.position;
+            transform.rotation = inCarCam.rotation;
         }
     }
 
@@ -28,7 +31,19 @@ public class GameCamera : MonoBehaviour
     }
 
     public void changeDiffCamShot() {
-        shotNumber += 1;
+        if (shotNumber < 6) {
+            shotNumber += 1;
+        } else {
+            shotNumber = 0;
+        }
         animator.SetInteger("ShotNumber", shotNumber);
+    }
+
+    public void turnOnApplyRootMotion() {
+        animator.applyRootMotion = true;
+    }
+
+     public void turnOffApplyRootMotion() {
+        animator.applyRootMotion = false;
     }
 }
