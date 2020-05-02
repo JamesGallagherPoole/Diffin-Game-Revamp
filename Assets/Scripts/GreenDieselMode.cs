@@ -10,6 +10,8 @@ public class GreenDieselMode : MonoBehaviour
     public Button button;
     public Soundtrack soundtrack;
     public ParticleSystem smoke;
+    public GameCamera gameCamera;
+    public DiffCamButton diffCamButton; 
 
     private GradientColorKey[] colorKey;
     private GradientAlphaKey[] alphaKey;
@@ -65,6 +67,8 @@ public class GreenDieselMode : MonoBehaviour
         greenDieselHendyEvent.start();
         car.maxSpeed = 200;
         soundtrack.startGreenDieselMode();
+        gameCamera.startGreenDieselMode();
+        diffCamButton.startGreenDieselMode();
         setGreenSmoke();
     }
 
