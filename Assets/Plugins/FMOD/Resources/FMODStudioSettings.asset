@@ -85,5 +85,5 @@ MonoBehaviour:
   - Soundtrack
   - TwinCam
   BanksToLoad: []
-  LiveUpdatePort: 9265
+  LiveUpdatePort: 9264
   EnableMemoryTracking: 0
