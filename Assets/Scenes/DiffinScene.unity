@@ -5719,7 +5719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &306645600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6089,6 +6089,7 @@ MonoBehaviour:
   menuCamera: {fileID: 963194225}
   gameCamera: {fileID: 306645599}
   car: {fileID: 836388244}
+  greenDieselMode: {fileID: 1895056233}
   diffVoice: event:/hit_diff
 --- !u!114 &440189421
 MonoBehaviour:
@@ -6933,12 +6934,12 @@ Light:
   m_GameObject: {fileID: 705507993}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
+  m_Intensity: 6
+  m_Range: 502.615
+  m_SpotAngle: 105
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -6975,7 +6976,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6993,7 +6994,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -41.1, y: -12, z: -581.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7898,7 +7899,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cdb9693f476715c48bfd4973cf4d7936, type: 2}
+  - {fileID: 2100000, guid: e7ed118296bd81c4582d688e2f1b07a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11234,7 +11235,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1895056233}
-        m_MethodName: engageGreenDieselMode
+        m_MethodName: engageGreenDieselXtraMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11263,6 +11264,8 @@ MonoBehaviour:
   smoke: {fileID: 116633368}
   gameCamera: {fileID: 306645605}
   diffCamButton: {fileID: 1340724062}
+  greenDieselXtraModeObject: {fileID: 1963278104}
+  greenDieselXtraMode: {fileID: 1963278108}
   greenDieselAvailable: event:/gdm_avail
   greenDieselEngage: event:/gdm_acti sound
   greenDieselHendy: 'event:/gdm_activate '
@@ -11686,6 +11689,8 @@ MonoBehaviour:
   smoke: {fileID: 116633368}
   gameCamera: {fileID: 306645605}
   diffCamButton: {fileID: 0}
+  greenDieselXtraModeObject: {fileID: 0}
+  greenDieselXtraMode: {fileID: 0}
   greenDieselAvailable: event:/gdm_avail
   greenDieselEngage: event:/gdm_acti sound
   greenDieselHendy: 'event:/gdm_activate '
@@ -12404,8 +12409,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8539059524314476981, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
-  - {fileID: -5683882820647860727, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
+  - {fileID: 2100000, guid: bf5a7e38d9f6f3545a738a37c3be3130, type: 2}
+  - {fileID: 2100000, guid: bf5a7e38d9f6f3545a738a37c3be3130, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12536,8 +12541,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8539059524314476981, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
-  - {fileID: -5683882820647860727, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
+  - {fileID: 2100000, guid: bf5a7e38d9f6f3545a738a37c3be3130, type: 2}
+  - {fileID: 2100000, guid: bf5a7e38d9f6f3545a738a37c3be3130, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12857,8 +12862,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8539059524314476981, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
-  - {fileID: -5683882820647860727, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
+  - {fileID: 2100000, guid: bf5a7e38d9f6f3545a738a37c3be3130, type: 2}
+  - {fileID: 2100000, guid: bf5a7e38d9f6f3545a738a37c3be3130, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12967,7 +12972,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ee4b3bd2a795ec3589d40edf460fb13d, type: 2}
+  - {fileID: 2100000, guid: e03d4d1de3aa43b408fcd14b51b19353, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13105,8 +13110,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a341ecece07fd35a0880f6f87ecb36a9, type: 2}
-  - {fileID: -5683882820647860727, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
+  - {fileID: 2100000, guid: bf5a7e38d9f6f3545a738a37c3be3130, type: 2}
+  - {fileID: 2100000, guid: bf5a7e38d9f6f3545a738a37c3be3130, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13256,10 +13261,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2893971069422789807, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
-  - {fileID: 2100000, guid: ee4b3bd2a795ec3589d40edf460fb13d, type: 2}
-  - {fileID: -3536992622776191756, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
-  - {fileID: -8982203863797388284, guid: cccd0604ea1be554fbb62cc3373ef04d, type: 3}
+  - {fileID: 2100000, guid: e03d4d1de3aa43b408fcd14b51b19353, type: 2}
+  - {fileID: 2100000, guid: e03d4d1de3aa43b408fcd14b51b19353, type: 2}
+  - {fileID: 2100000, guid: e03d4d1de3aa43b408fcd14b51b19353, type: 2}
+  - {fileID: 2100000, guid: e03d4d1de3aa43b408fcd14b51b19353, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

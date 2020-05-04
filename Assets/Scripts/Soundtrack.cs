@@ -25,4 +25,9 @@ public class Soundtrack : MonoBehaviour
     public void startGreenDieselMode() {
         jcashSoundtrackEvent.setParameterByName("isGreenDieselMode", 1.0f);
     }
+
+    public void startGreenDieselXtraMode() {
+        // Add Functionality here
+    }
+
 }

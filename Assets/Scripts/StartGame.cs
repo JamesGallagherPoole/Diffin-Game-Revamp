@@ -7,6 +7,7 @@ public class StartGame : MonoBehaviour
     public GameObject menuCamera;
     public GameObject gameCamera;
     public GameObject car;
+    public GreenDieselMode greenDieselMode;
 
     [FMODUnity.EventRef]
     public string diffVoice = "";
@@ -29,6 +30,7 @@ public class StartGame : MonoBehaviour
         menuCamera.SetActive(false);
         gameCamera.SetActive(true);
         car.SetActive(true);
+        greenDieselMode.startCounting();
     }
 
     public void playDiffVoice()

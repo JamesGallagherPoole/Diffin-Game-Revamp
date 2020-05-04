@@ -11,13 +11,16 @@ public class GreenDieselMode : MonoBehaviour
     public Soundtrack soundtrack;
     public ParticleSystem smoke;
     public GameCamera gameCamera;
-    public DiffCamButton diffCamButton; 
+    public DiffCamButton diffCamButton;
+    public GameObject greenDieselXtraModeObject;
+    public GreenDieselMode greenDieselXtraMode;
 
     private GradientColorKey[] colorKey;
     private GradientAlphaKey[] alphaKey;
 
     private bool isAvailable = false;
     private float timerCounter = 0;
+    private bool isCounting = false;
 
     [FMODUnity.EventRef]
     public string greenDieselAvailable = "";
@@ -42,7 +45,7 @@ public class GreenDieselMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (car.diff == true)
+        if (car.diff == true & isCounting)
         {
             timerCounter += Time.deltaTime*6;
             animator.SetFloat("GreenDieselTank", timerCounter);
@@ -70,6 +73,22 @@ public class GreenDieselMode : MonoBehaviour
         gameCamera.startGreenDieselMode();
         diffCamButton.startGreenDieselMode();
         setGreenSmoke();
+        greenDieselXtraModeObject.SetActive(true);
+        greenDieselXtraMode.startCounting();
+
+    }
+
+    public void engageGreenDieselXtraMode()
+    {
+        button.interactable = false;
+        animator.SetFloat("GreenDieselTank", 85f);
+        greenDieselEngageEvent.start();
+        car.maxSpeed = 240;
+        soundtrack.startGreenDieselMode();
+    }
+
+    public void startCounting() {
+        isCounting = true;
     }
 
     void setGreenSmoke() {
@@ -83,7 +102,6 @@ public class GreenDieselMode : MonoBehaviour
         colorKey[1].color = Color.white;
         colorKey[1].time = 0.50f;
 
-
         // Populate the alpha keys
         alphaKey = new GradientAlphaKey[3];
         alphaKey[0].alpha = 1.0f;
@@ -92,7 +110,6 @@ public class GreenDieselMode : MonoBehaviour
         alphaKey[1].time = 0.38f;
         alphaKey[2].alpha = 0.0f;
         alphaKey[2].time = 0.68f;
-
 
         gradient.SetKeys( colorKey, alphaKey);
         main.color = gradient;

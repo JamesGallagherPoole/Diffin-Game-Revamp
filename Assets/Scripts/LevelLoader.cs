@@ -23,7 +23,6 @@ public class LevelLoader : MonoBehaviour
 
     public void StartLoadingScreen()
     {
-        Debug.Log("HEY!");
         StartCoroutine(LoadingScreen());
     }
 
