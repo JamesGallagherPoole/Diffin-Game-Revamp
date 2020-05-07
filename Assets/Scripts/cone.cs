@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class cone : MonoBehaviour
 {
+    public Rigidbody rigidbody;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
@@ -24,5 +25,7 @@ public class cone : MonoBehaviour
     {
         transform.position = originalPosition;
         transform.rotation = originalRotation;
+        rigidbody.isKinematic = true;
+        rigidbody.isKinematic = false;
     }
 }

@@ -6,11 +6,14 @@ public class Car : MonoBehaviour
 {
     public GameObject cone;
     public ParticleSystem smoke;
+    public Rigidbody rigidBody;
+    public GameObject carPhysics;
+    public GameObject resetButton;
 
     [HideInInspector] public bool diff = false;
 
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
+    private Vector3 originalPosition, originalPhysicsPosition;
+    private Quaternion originalRotation, originalPhysicsRotation;
 
     public int maxSpeed = 170;
     private int maxRotate = 60;
@@ -68,6 +71,8 @@ public class Car : MonoBehaviour
 
         originalPosition = transform.position;
         originalRotation = transform.rotation;
+        originalPhysicsPosition = carPhysics.transform.position;
+        originalPhysicsRotation = carPhysics.transform.rotation;
     }
 
     // Update is called once per frame
@@ -152,8 +157,15 @@ public class Car : MonoBehaviour
             }
         }
         transform.RotateAround(cone.transform.position, transform.up, currentSpeed * Time.deltaTime);
+
+        if (carPhysics.transform.rotation.x > .015 & resetButton.activeSelf == false) {
+            resetButton.SetActive(true);
+        }
     }
 
+    public void deactivateResetButton() {
+        resetButton.SetActive(false);
+    }
     public void getDiffin()
     {
         diff = true;
@@ -192,6 +204,10 @@ public class Car : MonoBehaviour
     {
         transform.position = originalPosition;
         transform.rotation = originalRotation;
+        carPhysics.transform.position = originalPhysicsPosition;
+        carPhysics.transform.rotation = originalPhysicsRotation;
+        rigidBody.isKinematic = true;
+        rigidBody.isKinematic = false;
     }
 
 }
