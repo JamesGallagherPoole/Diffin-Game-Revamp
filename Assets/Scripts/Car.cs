@@ -40,6 +40,11 @@ public class Car : MonoBehaviour
     FMOD.Studio.EventInstance diffLoopEvent;
 
     [FMODUnity.EventRef]
+    public string limiterLoop = "";
+    FMOD.Studio.EventInstance limiterLoopEvent;
+
+
+    [FMODUnity.EventRef]
     public string endDiff = "";
     FMOD.Studio.EventInstance endDiffEvent;
 
@@ -59,6 +64,7 @@ public class Car : MonoBehaviour
         diffLoopEvent = FMODUnity.RuntimeManager.CreateInstance(diffLoop);
         engineStartEvent = FMODUnity.RuntimeManager.CreateInstance(engineStart);
         startDiffEvent = FMODUnity.RuntimeManager.CreateInstance(startDiff);
+        limiterLoopEvent = FMODUnity.RuntimeManager.CreateInstance(limiterLoop);
         endDiffEvent = FMODUnity.RuntimeManager.CreateInstance(endDiff);
         gravelSoundEvent = FMODUnity.RuntimeManager.CreateInstance(gravelSound);
         gravelBreakSoundEvent = FMODUnity.RuntimeManager.CreateInstance(gravelBreakSound);
@@ -81,13 +87,14 @@ public class Car : MonoBehaviour
         engineStartEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         startDiffEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         diffLoopEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        limiterLoopEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         engineStartEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         endDiffEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         gravelSoundEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         gravelBreakSoundEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
 
         if (diff == true) {
-            Handheld.Vibrate(); // GOWAN TA FUCK
+            Handheld.Vibrate(); // GWAN TA FUCK
             // Accelerate
             if (currentSpeed < maxSpeed) {
                 currentSpeed += 2;
@@ -172,7 +179,6 @@ public class Car : MonoBehaviour
         smoke.Play();
         startDiffEvent.start();
         gravelSoundEvent.start();
-
     }
 
     public void haltDiffin()

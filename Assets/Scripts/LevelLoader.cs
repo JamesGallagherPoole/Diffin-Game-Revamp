@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
+    public Animator loadingText;
     public StartGame startGameManager;
 
     public float loadingLength = 1f;
@@ -30,13 +31,16 @@ public class LevelLoader : MonoBehaviour
     {
         // Play Animation
         transition.SetTrigger("Start");
+        loadingText.SetTrigger("Start");
 
         // Wait for transition
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
 
         // Change Cameras
         startGameManager.startGame();
+
         // Play Animation
         transition.SetTrigger("End");
+        loadingText.SetTrigger("End");
     }
 }
