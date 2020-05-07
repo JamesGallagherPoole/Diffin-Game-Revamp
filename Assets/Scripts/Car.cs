@@ -12,7 +12,7 @@ public class Car : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
-    public int maxSpeed = 130;
+    public int maxSpeed = 170;
     private int maxRotate = 60;
     private float currentSpeed = 0;
     private float currentRotate = 0;
@@ -85,32 +85,24 @@ public class Car : MonoBehaviour
             Handheld.Vibrate(); // GOWAN TA FUCK
             // Accelerate
             if (currentSpeed < maxSpeed) {
-                currentSpeed += 1;
+                currentSpeed += 2;
             }
 
             // Rotate car based on phone rotation
             if (Input.acceleration.x > 0) {
                 if (currentRotate < maxRotate )
                 {
-                    if (rotateIncrement < 1)
-                    {
-                        rotateIncrement += .05f;
-                    }
-                    currentRotate += rotateIncrement;
+                    currentRotate += 1;
                 }
                 transform.Rotate(0, 1, 0);
             } else if (Input.acceleration.x < 0) {
                 if (currentRotate > -maxRotate)
                 {
-                    if (rotateIncrement > -1)
-                    {
-                        rotateIncrement -= .05f;
-                    }
-                    currentRotate -= rotateIncrement;
+                    currentRotate -= 1;
                 }
                 transform.Rotate(0, -1, 0);
-
             }
+
             /*
             // Move the position of the car slightly over time
             Debug.Log(Input.acceleration.z);
@@ -168,6 +160,7 @@ public class Car : MonoBehaviour
         smoke.Play();
         startDiffEvent.start();
         gravelSoundEvent.start();
+
     }
 
     public void haltDiffin()

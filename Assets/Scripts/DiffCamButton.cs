@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DiffCamButton : MonoBehaviour
 {
     public Button button;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +21,6 @@ public class DiffCamButton : MonoBehaviour
 
     public void startGreenDieselMode() {
         button.interactable = true;
+        animator.SetBool("GreenDieselMode", true);
     }
 }

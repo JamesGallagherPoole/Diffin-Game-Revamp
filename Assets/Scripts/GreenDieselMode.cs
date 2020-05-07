@@ -65,6 +65,7 @@ public class GreenDieselMode : MonoBehaviour
     public void engageGreenDieselMode()
     {
         button.interactable = false;
+        animator.SetBool("GDM_XTRA", false);
         animator.SetFloat("GreenDieselTank", 85f);
         greenDieselEngageEvent.start();
         greenDieselHendyEvent.start();
@@ -72,22 +73,24 @@ public class GreenDieselMode : MonoBehaviour
         soundtrack.startGreenDieselMode();
         gameCamera.startGreenDieselMode();
         diffCamButton.startGreenDieselMode();
-        setGreenSmoke();
         greenDieselXtraModeObject.SetActive(true);
         greenDieselXtraMode.startCounting();
-
+        isCounting = false;
     }
 
     public void engageGreenDieselXtraMode()
     {
         button.interactable = false;
+        animator.SetBool("GDM_XTRA", true);
         animator.SetFloat("GreenDieselTank", 85f);
         greenDieselEngageEvent.start();
         car.maxSpeed = 240;
-        soundtrack.startGreenDieselMode();
+        setGreenSmoke();
+        isCounting = false;
     }
 
     public void startCounting() {
+        Debug.Log("YAy");
         isCounting = true;
     }
 
