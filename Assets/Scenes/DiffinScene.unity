@@ -833,7 +833,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 1
-    maxNumParticles: 5000
+    maxNumParticles: 4000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1098,7 +1098,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2000
+      scalar: 1000
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5722,8 +5722,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: resetTimer
+      - m_Target: {fileID: 298999552}
+        m_MethodName: diffAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5793,6 +5793,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 0}
+  gdmXtraButton: {fileID: 1963278104}
+  greenDieselXtraMode: {fileID: 1963278108}
+  greenDieselMode: {fileID: 1895056233}
 --- !u!1 &306645599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,7 +6028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &347672392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7578,6 +7581,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1814968424}
+        m_MethodName: updateDiffCountDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &764339916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7736,7 +7750,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -7897,7 +7911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &836388245
 Transform:
   m_ObjectHideFlags: 0
@@ -7906,7 +7920,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836388244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49, y: -69.7, z: -682.5}
+  m_LocalPosition: {x: 49, y: -69.7, z: -705.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5006512736216943146}
@@ -9878,7 +9892,7 @@ RectTransform:
   m_LocalScale: {x: 3.7940552, y: 10.71278, z: 1.0685058}
   m_Children: []
   m_Father: {fileID: 1697651399}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10454,7 +10468,7 @@ MonoBehaviour:
   carPhysics: {fileID: 1766043669}
   resetButton: {fileID: 1569999667}
   diff: 0
-  maxSpeed: 130
+  maxSpeed: 190
   hendyCommentary: event:/game_commentary
   engineStart: event:/engine_on_tc_3d
   startDiff: event:/temp_tc_3d
@@ -11226,9 +11240,9 @@ RectTransform:
   - {fileID: 214658283}
   - {fileID: 1181818499}
   - {fileID: 764339914}
+  - {fileID: 1340724058}
   - {fileID: 1895056230}
   - {fileID: 1963278105}
-  - {fileID: 1340724058}
   - {fileID: 1569999668}
   m_Father: {fileID: 306645602}
   m_RootOrder: 0
@@ -11818,7 +11832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795114128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.3, y: 35.8, z: -735}
+  m_LocalPosition: {x: 50.3, y: 11.1, z: -1161.8}
   m_LocalScale: {x: 0.93145186, y: -0.028446969, z: -1.1462691}
   m_Children: []
   m_Father: {fileID: 644503035}
@@ -11907,8 +11921,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1814968423}
   - component: {fileID: 1814968426}
-  - component: {fileID: 1814968425}
   - component: {fileID: 1814968424}
+  - component: {fileID: 1814968425}
   m_Layer: 5
   m_Name: DiffCounter
   m_TagString: Untagged
@@ -11945,12 +11959,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1814968422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f2dbca3ac36304c82f58ba63885f87, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ab5fa8ceaf854348932b4fc9dff624a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1814968425}
-  score: {fileID: 1181818495}
-  ScoreCountEvent: event:/point_noise
+  diffCounter: {fileID: 1795114130}
 --- !u!114 &1814968425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12179,7 +12192,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1697651399}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12604,7 +12617,7 @@ RectTransform:
   m_LocalScale: {x: 1.3655217, y: 1.3272973, z: 1}
   m_Children: []
   m_Father: {fileID: 1697651399}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

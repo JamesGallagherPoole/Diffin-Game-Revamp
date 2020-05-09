@@ -20,7 +20,6 @@ public class DiffCounter : MonoBehaviour
     //When the Primitive collides with the walls, it will reverse direction
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(diffCount);
         diffCount += 1;
         Save();
     }
