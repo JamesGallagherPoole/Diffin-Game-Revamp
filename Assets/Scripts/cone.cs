@@ -7,6 +7,11 @@ public class cone : MonoBehaviour
     public Rigidbody rigidbody;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
+    public GameObject gameCamera;
+    public GameObject pointsScreenCamera;
+    public GameObject inGameUi;
+    public PointsScreenCounter pointsScreenCounter;
+    public DisplayDiffCount displayDiffCount;
 
     [FMODUnity.EventRef]
     public string ladsJeer = "";
@@ -34,8 +39,17 @@ public class cone : MonoBehaviour
         if (collision.gameObject.name == "CarPhysics")
         {
             ladsJeerEvent.start();
+            hitConeEndGame();
             Debug.Log("COLLIDED!!");
         }
+    }
+
+    public void hitConeEndGame() {
+        gameCamera.SetActive(false);
+        pointsScreenCamera.SetActive(true);
+        inGameUi.SetActive(false);
+        pointsScreenCounter.startCount();
+        displayDiffCount.updateDiffCountDisplay();
     }
 
     public void Reset()

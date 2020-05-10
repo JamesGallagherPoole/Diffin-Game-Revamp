@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DiffCounter : MonoBehaviour
 {
-    public int diffCount;
+    [HideInInspector] public int diffCount;
+    [HideInInspector] public int currentDiffCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class DiffCounter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         diffCount += 1;
+        currentDiffCount += 1;
         Save();
     }
 

@@ -6,7 +6,7 @@ using TMPro;
 public class PointsScreenCounter : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public Score score;
+    public DiffCounter diffCount;
     private int totalScore;
     private int currentScore;
 
@@ -26,7 +26,7 @@ public class PointsScreenCounter : MonoBehaviour
     {
         if (currentScore < totalScore)
         {
-            currentScore = currentScore + 50;
+            currentScore = currentScore + 1;
             textComponent.text = currentScore.ToString();
         } else
         {
@@ -36,7 +36,7 @@ public class PointsScreenCounter : MonoBehaviour
 
     public void startCount()
     {
-        totalScore = score.score;
+        totalScore = diffCount.currentDiffCount;
         currentScore = 0;
         scoreSound = FMODUnity.RuntimeManager.CreateInstance(ScoreCountEvent);
         scoreSound.start();
