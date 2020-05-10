@@ -7,6 +7,8 @@ public class GameCamera : MonoBehaviour
     public Animator animator;
     public Transform car;
     public Transform inCarCam;
+    public Transform inFrontCam;
+    public Transform onWheelCam;
 
     private int shotNumber = 0;
     // Start is called before the first frame update
@@ -18,9 +20,15 @@ public class GameCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (shotNumber == 6) {
+        if (shotNumber == 1) {
+            transform.position = inFrontCam.position;
+            transform.rotation = inFrontCam.rotation;
+        } else if (shotNumber == 6) {
             transform.position = inCarCam.position;
             transform.rotation = inCarCam.rotation;
+        } else if (shotNumber == 8) {
+            transform.position = onWheelCam.position;
+            transform.rotation = onWheelCam.rotation;
         }
     }
 
@@ -29,7 +37,7 @@ public class GameCamera : MonoBehaviour
     }
 
     public void changeDiffCamShot() {
-        if (shotNumber < 6) {
+        if (shotNumber < 7) {
             shotNumber += 1;
         } else {
             shotNumber = 0;

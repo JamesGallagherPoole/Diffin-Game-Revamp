@@ -16,7 +16,7 @@ public class Wheel : MonoBehaviour
     void Update()
     {
         if (carScript.diff == true) {
-           // transform.RotateAround(transform.position, transform.left, Time.deltaTime * 90f);
+           transform.Rotate(30f, 0f, 0f);
         }
     }
 }
