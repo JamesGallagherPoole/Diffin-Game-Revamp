@@ -93,6 +93,7 @@ public class GreenDieselMode : MonoBehaviour
         animator.SetFloat("GreenDieselTank", 85f);
         greenDieselEngageEvent.start();
         greenDieselHendyEvent.start();
+        soundtrack.startGreenDieselXtraMode();
         //StartCoroutine(gameCamera.Shake(.2f, .5f));
         car.maxSpeed = 240;
         setGreenSmoke();

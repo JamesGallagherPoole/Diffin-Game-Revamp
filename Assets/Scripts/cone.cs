@@ -10,6 +10,7 @@ public class cone : MonoBehaviour
     public GameObject gameCamera;
     public GameObject pointsScreenCamera;
     public GameObject inGameUi;
+    public Soundtrack soundtrack;
     public PointsScreenCounter pointsScreenCounter;
     public DisplayDiffCount displayDiffCount;
 
@@ -45,6 +46,7 @@ public class cone : MonoBehaviour
     }
 
     public void hitConeEndGame() {
+        soundtrack.steadyOnHey();
         gameCamera.SetActive(false);
         pointsScreenCamera.SetActive(true);
         inGameUi.SetActive(false);

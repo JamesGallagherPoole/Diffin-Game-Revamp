@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{094fe305-dee1-4ea7-bbf8-af796f52b6eb}">
+		<property name="volume">
+			<value>4</value>
+		</property>
+		<property name="name">
+			<value>Commentary</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{1f959e4a-4a0e-418a-bf9b-b7a681924f50}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{1861cd06-e09f-45ab-b886-d2a99b23df43}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{233e442b-39f5-4b76-8772-446f5f7b63a0}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{1f959e4a-4a0e-418a-bf9b-b7a681924f50}">
+		<relationship name="effects">
+			<destination>{9c7c305c-4a3b-4695-ac42-30a7aa9efed7}</destination>
+			<destination>{15d981ec-98b9-4ab8-ac2d-cf643db0a4f5}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{1861cd06-e09f-45ab-b886-d2a99b23df43}" />
+	<object class="MixerBusFader" id="{9c7c305c-4a3b-4695-ac42-30a7aa9efed7}" />
+	<object class="Sidechain" id="{15d981ec-98b9-4ab8-ac2d-cf643db0a4f5}" />
+</objects>

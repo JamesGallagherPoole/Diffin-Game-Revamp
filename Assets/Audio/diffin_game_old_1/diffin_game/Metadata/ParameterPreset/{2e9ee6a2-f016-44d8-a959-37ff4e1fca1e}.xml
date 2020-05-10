@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{2e9ee6a2-f016-44d8-a959-37ff4e1fca1e}">
+		<property name="name">
+			<value>isGreenDieselMode</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bd116834-fd62-4e86-95b2-e7b6bcbea2ca}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a007722a-a6a0-4b2d-b519-6b633f545c69}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a007722a-a6a0-4b2d-b519-6b633f545c69}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="automators">
+			<destination>{5594e673-9ffb-4248-9906-96e7ea2931a2}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{5594e673-9ffb-4248-9906-96e7ea2931a2}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>

@@ -5,13 +5,19 @@ using UnityEngine;
 public class DiffAgainButton : MonoBehaviour
 {
     public Score score;
+    public PointsScreenCounter pointsScreenCounter;
     public GameObject gdmXtraButton;
     public GreenDieselMode greenDieselXtraMode;
     public GreenDieselMode greenDieselMode;
+
+    [FMODUnity.EventRef]
+    public string kingOfTheCone = "";
+    FMOD.Studio.EventInstance kingOfTheConeEvent;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        kingOfTheConeEvent = FMODUnity.RuntimeManager.CreateInstance(kingOfTheCone);
     }
 
     // Update is called once per frame
@@ -25,5 +31,7 @@ public class DiffAgainButton : MonoBehaviour
         gdmXtraButton.SetActive(false);
         greenDieselMode.reset();
         greenDieselMode.startCounting();
+        pointsScreenCounter.endCount();
+        kingOfTheConeEvent.start();
     }
 }

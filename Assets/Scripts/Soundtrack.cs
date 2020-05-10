@@ -8,6 +8,7 @@ public class Soundtrack : MonoBehaviour
     public string jcashSoundtrack = "";
     FMOD.Studio.EventInstance jcashSoundtrackEvent;
     FMOD.Studio.PARAMETER_ID isGreenDieselModeParameterId;
+    FMOD.Studio.PARAMETER_ID isGreenDieselModeXtraParameterId;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,11 @@ public class Soundtrack : MonoBehaviour
     }
 
     public void startGreenDieselXtraMode() {
-        // Add Functionality here
+        jcashSoundtrackEvent.setParameterByName("isGreenDieselModeXtra", 1.0f);
     }
 
+    public void steadyOnHey() {
+        jcashSoundtrackEvent.setParameterByName("isGreenDieselModeXtra", 0.0f);
+        jcashSoundtrackEvent.setParameterByName("isGreenDieselMode", 0.0f);
+    }
 }

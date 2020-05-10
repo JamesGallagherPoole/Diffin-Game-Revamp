@@ -36,6 +36,7 @@ public class PointsScreenCounter : MonoBehaviour
 
     public void startCount()
     {
+        scoreSound.setParameterByName("isFinishedCounting", 0.0f);
         totalScore = diffCount.currentDiffCount;
         currentScore = 0;
         scoreSound = FMODUnity.RuntimeManager.CreateInstance(ScoreCountEvent);
