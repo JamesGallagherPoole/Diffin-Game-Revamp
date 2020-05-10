@@ -18,9 +18,7 @@ public class GameCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (shotNumber == 3) {
-            transform.LookAt(car);
-        } else if (shotNumber == 6) {
+        if (shotNumber == 6) {
             transform.position = inCarCam.position;
             transform.rotation = inCarCam.rotation;
         }
