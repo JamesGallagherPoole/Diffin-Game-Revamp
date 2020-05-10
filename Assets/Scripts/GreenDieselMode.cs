@@ -14,6 +14,7 @@ public class GreenDieselMode : MonoBehaviour
     public DiffCamButton diffCamButton;
     public GameObject greenDieselXtraModeObject;
     public GreenDieselMode greenDieselXtraMode;
+    [HideInInspector] public bool commentaryOngoing = false;
 
     private GradientColorKey[] colorKey;
     private GradientAlphaKey[] alphaKey;
@@ -59,6 +60,12 @@ public class GreenDieselMode : MonoBehaviour
                 greenDieselAvailableEvent.start();
                 isAvailable = true;
             }
+        }
+        
+        if (IsPlaying(greenDieselHendyEvent)) {
+            commentaryOngoing = true;
+        } else if (commentaryOngoing == true & !IsPlaying(greenDieselHendyEvent)) {
+            commentaryOngoing = false;
         }
     }
 
@@ -127,4 +134,9 @@ public class GreenDieselMode : MonoBehaviour
         gradient.SetKeys( colorKey, alphaKey);
         main.color = gradient;
     }
+    bool IsPlaying(FMOD.Studio.EventInstance instance) {
+	    FMOD.Studio.PLAYBACK_STATE state;   
+	    instance.getPlaybackState(out state);
+	    return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
+    } 
 }

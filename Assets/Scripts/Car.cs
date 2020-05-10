@@ -9,6 +9,8 @@ public class Car : MonoBehaviour
     public Rigidbody rigidBody;
     public GameObject carPhysics;
     public GameObject resetButton;
+    public GreenDieselMode greenDieselMode;
+    public GreenDieselMode greenDieselXtraMode;
 
     [HideInInspector] public bool diff = false;
 
@@ -198,9 +200,15 @@ public class Car : MonoBehaviour
         {
             if (i > 9.0)
             {
-                hendyEvent.start();
-                isHendyCounterCounting = false;
-                break;
+                // Make sure green diesel mode commentary is not going on
+                if (greenDieselMode.commentaryOngoing == false & greenDieselXtraMode.commentaryOngoing == false) {
+                    hendyEvent.start();
+                    isHendyCounterCounting = false;
+                    break;
+                } else {
+                    isHendyCounterCounting = false;
+                    break;
+                }
             }
             yield return null;
         }
