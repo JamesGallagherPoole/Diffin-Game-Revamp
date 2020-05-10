@@ -8,9 +8,15 @@ public class cone : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
+    [FMODUnity.EventRef]
+    public string ladsJeer = "";
+    FMOD.Studio.EventInstance ladsJeerEvent;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        ladsJeerEvent = FMODUnity.RuntimeManager.CreateInstance(ladsJeer);
         originalPosition = transform.position;
         originalRotation = transform.rotation;
     }
@@ -19,6 +25,17 @@ public class cone : MonoBehaviour
     void Update()
     {
         
+    }
+
+    //Detect collisions between the GameObjects with Colliders attached
+    void OnCollisionEnter(Collision collision)
+    {
+        //Check for a match with the specified name on any GameObject that collides with your GameObject
+        if (collision.gameObject.name == "CarPhysics")
+        {
+            ladsJeerEvent.start();
+            Debug.Log("COLLIDED!!");
+        }
     }
 
     public void Reset()

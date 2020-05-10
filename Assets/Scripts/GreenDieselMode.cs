@@ -100,7 +100,6 @@ public class GreenDieselMode : MonoBehaviour
     }
 
     public void startCounting() {
-        Debug.Log("YAy");
         isCounting = true;
     }
 

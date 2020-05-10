@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{3cc27494-7736-4953-be0e-5de9c9e619fd}">
+		<property name="assetPath">
+			<value>diffin point total.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5151020408163265</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72814363-126a-45fc-a9fb-b0e99a1b9aa8}</destination>
+		</relationship>
+	</object>
+</objects>
