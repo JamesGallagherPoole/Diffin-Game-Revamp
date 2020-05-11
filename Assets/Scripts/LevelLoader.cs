@@ -6,7 +6,12 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public Animator loadingText;
+    public Animator hitConeText;
     public StartGame startGameManager;
+
+    public GameObject gameCamera;
+    public GameObject pointsScreenCamera;
+    public GameObject inGameUi;
 
     public float loadingLength = 1f;
 
@@ -27,6 +32,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadingScreen());
     }
 
+    public void StartHitConeLoadingScreen()
+    {
+        StartCoroutine(LoadingHitConeScreen());
+    }
+
     IEnumerator LoadingScreen()
     {
         // Play Animation
@@ -42,5 +52,23 @@ public class LevelLoader : MonoBehaviour
         // Play Animation
         transition.SetTrigger("End");
         loadingText.SetTrigger("End");
+    }
+    
+    IEnumerator LoadingHitConeScreen()
+    {
+        // Play Animation
+        transition.SetTrigger("Start");
+        hitConeText.SetTrigger("Start");
+
+        // Wait for transition
+        yield return new WaitForSeconds(3);
+
+        gameCamera.SetActive(false);
+        pointsScreenCamera.SetActive(true);
+        inGameUi.SetActive(false);
+
+        // Play Animation
+        transition.SetTrigger("End");
+        hitConeText.SetTrigger("End");
     }
 }

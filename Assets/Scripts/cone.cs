@@ -13,6 +13,7 @@ public class cone : MonoBehaviour
     public Soundtrack soundtrack;
     public PointsScreenCounter pointsScreenCounter;
     public DisplayDiffCount displayDiffCount;
+    public LevelLoader levelLoader;
 
     [FMODUnity.EventRef]
     public string ladsJeer = "";
@@ -46,10 +47,8 @@ public class cone : MonoBehaviour
     }
 
     public void hitConeEndGame() {
+        levelLoader.StartHitConeLoadingScreen();
         soundtrack.steadyOnHey();
-        gameCamera.SetActive(false);
-        pointsScreenCamera.SetActive(true);
-        inGameUi.SetActive(false);
         pointsScreenCounter.startCount();
         displayDiffCount.updateDiffCountDisplay();
     }
