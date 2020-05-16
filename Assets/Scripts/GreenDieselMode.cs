@@ -48,7 +48,7 @@ public class GreenDieselMode : MonoBehaviour
     {
         if (car.diff == true & isCounting)
         {
-            timerCounter += Time.deltaTime*12;
+            timerCounter += Time.deltaTime*4;
             animator.SetFloat("GreenDieselTank", timerCounter);
         }
 
@@ -77,6 +77,7 @@ public class GreenDieselMode : MonoBehaviour
         greenDieselEngageEvent.start();
         greenDieselHendyEvent.start();
         car.maxSpeed = 220;
+        car.startGreenDieselMode();
         soundtrack.startGreenDieselMode();
         diffCamButton.startGreenDieselMode();
         gameCamera.startGreenDieselMode();

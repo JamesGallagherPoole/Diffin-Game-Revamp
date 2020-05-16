@@ -24,6 +24,7 @@ public class Car : MonoBehaviour
     private float rotateIncrement = 0;
     private int frictionCounter = 10;
     private bool isHendyCounterCounting = false;
+    private bool isGreenDieselMode = false;
 
     [FMODUnity.EventRef]
     public string hendyCommentary = "";
@@ -32,6 +33,10 @@ public class Car : MonoBehaviour
     [FMODUnity.EventRef]
     public string engineStart = "";
     FMOD.Studio.EventInstance engineStartEvent;
+
+    [FMODUnity.EventRef]
+    public string idleEngine = "";
+    FMOD.Studio.EventInstance idleEngineEvent;
 
     [FMODUnity.EventRef]
     public string startDiff = "";
@@ -45,6 +50,9 @@ public class Car : MonoBehaviour
     public string limiterLoop = "";
     FMOD.Studio.EventInstance limiterLoopEvent;
 
+    [FMODUnity.EventRef]
+    public string startDiffWithNoise = "";
+    FMOD.Studio.EventInstance startDiffWithNoiseEvent;
 
     [FMODUnity.EventRef]
     public string endDiff = "";
@@ -58,15 +66,19 @@ public class Car : MonoBehaviour
     public string gravelBreakSound = "";
     FMOD.Studio.EventInstance gravelBreakSoundEvent;
 
+    //Audio state vars
+    private bool isFirstDiff = true;
 
     // Start is called before the first frame update
     void Start()
     {
         // Load sound events
         diffLoopEvent = FMODUnity.RuntimeManager.CreateInstance(diffLoop);
+        idleEngineEvent = FMODUnity.RuntimeManager.CreateInstance(idleEngine);
         engineStartEvent = FMODUnity.RuntimeManager.CreateInstance(engineStart);
         startDiffEvent = FMODUnity.RuntimeManager.CreateInstance(startDiff);
         limiterLoopEvent = FMODUnity.RuntimeManager.CreateInstance(limiterLoop);
+        startDiffWithNoiseEvent = FMODUnity.RuntimeManager.CreateInstance(startDiffWithNoise);
         endDiffEvent = FMODUnity.RuntimeManager.CreateInstance(endDiff);
         gravelSoundEvent = FMODUnity.RuntimeManager.CreateInstance(gravelSound);
         gravelBreakSoundEvent = FMODUnity.RuntimeManager.CreateInstance(gravelBreakSound);
@@ -87,9 +99,11 @@ public class Car : MonoBehaviour
     void Update()
     {
         engineStartEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        idleEngineEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         startDiffEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         diffLoopEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         limiterLoopEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        startDiffWithNoiseEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         engineStartEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         endDiffEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         gravelSoundEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
@@ -177,19 +191,34 @@ public class Car : MonoBehaviour
     }
     public void getDiffin()
     {
+        startDiffEvent.start();
         diff = true;
         smoke.Play();
-        startDiffEvent.start();
         gravelSoundEvent.start();
+
+        if (isGreenDieselMode == true) {
+            limiterLoopEvent.start();
+        }
+        idleEngineEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        engineStartEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void haltDiffin()
     {
         diff = false;
+
         startDiffEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         gravelSoundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        //endDiffEvent.start();
+        limiterLoopEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        endDiffEvent.start();
         gravelBreakSoundEvent.start();
+
+        idleEngineEvent.start();
+    }
+
+    public void startGreenDieselMode() {
+        isGreenDieselMode = true;
+        limiterLoopEvent.start();
     }
 
     // Coroutine counter to play hendys at an interval
@@ -222,6 +251,14 @@ public class Car : MonoBehaviour
         carPhysics.transform.rotation = originalPhysicsRotation;
         rigidBody.isKinematic = true;
         rigidBody.isKinematic = false;
+        isGreenDieselMode = false;
+        maxSpeed = 180;
+        
+    }
+    bool IsPlaying(FMOD.Studio.EventInstance instance) {
+	    FMOD.Studio.PLAYBACK_STATE state;   
+	    instance.getPlaybackState(out state);
+	    return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
     }
 
 }

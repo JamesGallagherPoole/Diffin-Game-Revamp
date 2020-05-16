@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public Animator loadingText;
     public Animator hitConeText;
+    public Animator loadingStatsText;
     public StartGame startGameManager;
 
     public GameObject gameCamera;
@@ -35,6 +36,11 @@ public class LevelLoader : MonoBehaviour
     public void StartHitConeLoadingScreen()
     {
         StartCoroutine(LoadingHitConeScreen());
+    }
+    
+    public void StartLoadingStatsScreen()
+    {
+        StartCoroutine(LoadingStatsScreen());
     }
 
     IEnumerator LoadingScreen()
@@ -70,5 +76,23 @@ public class LevelLoader : MonoBehaviour
         // Play Animation
         transition.SetTrigger("End");
         hitConeText.SetTrigger("End");
+    }
+
+    IEnumerator LoadingStatsScreen()
+    {
+        // Play Animation
+        transition.SetTrigger("Start");
+        loadingStatsText.SetTrigger("Start");
+
+        // Wait for transition
+        yield return new WaitForSeconds(3);
+
+        gameCamera.SetActive(false);
+        pointsScreenCamera.SetActive(true);
+        inGameUi.SetActive(false);
+
+        // Play Animation
+        transition.SetTrigger("End");
+        loadingStatsText.SetTrigger("End");
     }
 }

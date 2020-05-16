@@ -23,7 +23,7 @@ public class GameCamera : MonoBehaviour
         if (shotNumber == 1) {
             transform.position = inFrontCam.position;
             transform.rotation = inFrontCam.rotation;
-        } else if (shotNumber == 6) {
+       } else if (shotNumber == 5) {
             transform.position = inCarCam.position;
             transform.rotation = inCarCam.rotation;
         } else if (shotNumber == 8) {
@@ -35,9 +35,8 @@ public class GameCamera : MonoBehaviour
     public void startGreenDieselMode() {
         animator.SetTrigger("GreenDieselMode");
     }
-
     public void changeDiffCamShot() {
-        if (shotNumber < 7) {
+            if (shotNumber < 5) {
             shotNumber += 1;
         } else {
             shotNumber = 0;
