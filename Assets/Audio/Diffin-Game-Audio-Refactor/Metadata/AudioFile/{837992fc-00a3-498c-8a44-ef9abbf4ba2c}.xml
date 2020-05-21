@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{837992fc-00a3-498c-8a44-ef9abbf4ba2c}">
+		<property name="assetPath">
+			<value>gdm activated.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.9853061224489796</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d12ce6dc-991a-49bf-8a79-bf5ceb68d42d}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{8a7f61ba-59ed-448a-aec4-2369b9c334c9}">
+		<property name="assetPath">
+			<value>Johnny Cash Was A Raver.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>111.51673469387755</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d12ce6dc-991a-49bf-8a79-bf5ceb68d42d}</destination>
+		</relationship>
+	</object>
+</objects>

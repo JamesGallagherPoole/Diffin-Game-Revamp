@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{2f868e96-6479-48f7-83a1-af4167135554}">
+		<property name="assetPath">
+			<value>Hendys/Green Diesel Mode/GDM_01.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.7440000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d12ce6dc-991a-49bf-8a79-bf5ceb68d42d}</destination>
+		</relationship>
+	</object>
+</objects>

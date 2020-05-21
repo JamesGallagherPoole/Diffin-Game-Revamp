@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{dbb7b183-3e61-4141-9ac8-e19e2d5ed113}">
+		<property name="assetPath">
+			<value>Hendys/Intro/intro_10.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8240000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d12ce6dc-991a-49bf-8a79-bf5ceb68d42d}</destination>
+		</relationship>
+	</object>
+</objects>
