@@ -9,6 +9,7 @@ public class DiffAgainButton : MonoBehaviour
     public GameObject gdmXtraButton;
     public GreenDieselMode greenDieselXtraMode;
     public GreenDieselMode greenDieselMode;
+    public DiffCounter diffCounter;
     public GameCamera gameCamera;
 
     [FMODUnity.EventRef]
@@ -35,5 +36,6 @@ public class DiffAgainButton : MonoBehaviour
         greenDieselMode.startCounting();
         pointsScreenCounter.endCount();
         kingOfTheConeEvent.start();
+        diffCounter.currentDiffCount = 0;
     }
 }

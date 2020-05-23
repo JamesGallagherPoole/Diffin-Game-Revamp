@@ -6299,6 +6299,7 @@ MonoBehaviour:
   gdmXtraButton: {fileID: 1963278104}
   greenDieselXtraMode: {fileID: 1963278108}
   greenDieselMode: {fileID: 1895056233}
+  diffCounter: {fileID: 1795114130}
   gameCamera: {fileID: 306645605}
   kingOfTheCone: event:/hendy_king_of_the_cone
 --- !u!1 &306645599
