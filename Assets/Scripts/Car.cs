@@ -22,7 +22,6 @@ public class Car : MonoBehaviour
     private int maxRotate = 60;
     private float currentSpeed = 0;
     private float currentRotate = 0;
-    private float rotateIncrement = 0;
     private int frictionCounter = 10;
     private bool isHendyCounterCounting = false;
     private bool isGreenDieselMode = false;
@@ -66,9 +65,6 @@ public class Car : MonoBehaviour
     [FMODUnity.EventRef]
     public string gravelBreakSound = "";
     FMOD.Studio.EventInstance gravelBreakSoundEvent;
-
-    //Audio state vars
-    private bool isFirstDiff = true;
 
     // Start is called before the first frame update
     void Start()
