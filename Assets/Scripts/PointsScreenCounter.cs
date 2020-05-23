@@ -9,6 +9,7 @@ public class PointsScreenCounter : MonoBehaviour
     public DiffCounter diffCount;
     private int totalScore;
     private int currentScore;
+    private bool isCounting = false;
 
     [FMODUnity.EventRef]
     public string ScoreCountEvent = "";
@@ -36,15 +37,19 @@ public class PointsScreenCounter : MonoBehaviour
 
     public void startCount()
     {
-        scoreSound.setParameterByName("isFinishedCounting", 0.0f);
-        totalScore = diffCount.currentDiffCount;
-        currentScore = 0;
-        scoreSound = FMODUnity.RuntimeManager.CreateInstance(ScoreCountEvent);
-        scoreSound.start();
+        if (isCounting == false) {
+            isCounting = true;
+            scoreSound.setParameterByName("isFinishedCounting", 0.0f);
+            totalScore = diffCount.currentDiffCount;
+            currentScore = 0;
+            scoreSound = FMODUnity.RuntimeManager.CreateInstance(ScoreCountEvent);
+            scoreSound.start();
+        }
     }
 
     public void endCount()
     {
         scoreSound.setParameterByName("isFinishedCounting", 1.0f);
+        isCounting = false;
     }
 }

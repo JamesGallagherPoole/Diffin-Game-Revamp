@@ -182,7 +182,7 @@ public class Car : MonoBehaviour
         transform.RotateAround(cone.transform.position, transform.up, currentSpeed * Time.deltaTime);
 
         if (carPhysics.transform.rotation.x > .015 & resetButton.activeSelf == false) {
-            resetButton.SetActive(true);
+           // resetButton.SetActive(true);
         }
     }
 
@@ -225,9 +225,9 @@ public class Car : MonoBehaviour
     private IEnumerator startCommentaryTimer()
     {
         isHendyCounterCounting = true;
-        for (float i = 0; i <= 10.0f; i += Time.deltaTime)
+        for (float i = 0; i <= 9.0f; i += Time.deltaTime)
         {
-            if (i > 9.0)
+            if (i > 8.0)
             {
                 // Make sure green diesel mode commentary is not going on
                 if (greenDieselMode.commentaryOngoing == false & greenDieselXtraMode.commentaryOngoing == false) {

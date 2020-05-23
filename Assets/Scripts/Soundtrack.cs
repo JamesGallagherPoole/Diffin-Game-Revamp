@@ -10,11 +10,15 @@ public class Soundtrack : MonoBehaviour
     FMOD.Studio.PARAMETER_ID isGreenDieselModeParameterId;
     FMOD.Studio.PARAMETER_ID isGreenDieselModeXtraParameterId;
 
+    [FMODUnity.EventRef]
+    public string gdmXtraSoundtrack = "";
+    FMOD.Studio.EventInstance gdmeXtraSoundtrackEvent;
+
     // Start is called before the first frame update
     void Start()
     {
         jcashSoundtrackEvent = FMODUnity.RuntimeManager.CreateInstance(jcashSoundtrack);
-        jcashSoundtrackEvent.start();
+        gdmeXtraSoundtrackEvent = FMODUnity.RuntimeManager.CreateInstance(gdmXtraSoundtrack);
     }
 
     // Update is called once per frame
@@ -28,11 +32,18 @@ public class Soundtrack : MonoBehaviour
     }
 
     public void startGreenDieselXtraMode() {
-        jcashSoundtrackEvent.setParameterByName("isGreenDieselModeXtra", 1.0f);
+        jcashSoundtrackEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        gdmeXtraSoundtrackEvent.start();
+    }
+
+    public void startSoundtrack() {
+        jcashSoundtrackEvent.start();
     }
 
     public void steadyOnHey() {
         jcashSoundtrackEvent.setParameterByName("isGreenDieselModeXtra", 0.0f);
         jcashSoundtrackEvent.setParameterByName("isGreenDieselMode", 0.0f);
+        gdmeXtraSoundtrackEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        jcashSoundtrackEvent.start();
     }
 }

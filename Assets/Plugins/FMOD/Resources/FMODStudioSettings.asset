@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 0
+  HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Audio/diffin_game/diffin_game/diffin_game.fspro
-  sourceBankPath: Assets\Audio\diffin_game\diffin_game\Build
+  sourceProjectPath: Assets\Audio\Diffin-Game-Audio-Refactor\Diffin-Game-Audio-Refactor.fspro
+  sourceBankPath: Assets\Audio\Diffin-Game-Audio-Refactor\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
     Value: 0
   OverlaySettings:
   - Platform: 1
-    Value: 0
+    Value: 1
   - Platform: 2
     Value: 0
   - Platform: 20
@@ -79,11 +79,9 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - CarGeneral
-  - Game Sounds
+  - GameSounds
+  - GeneralCar
   - Hendys
-  - Soundtrack
-  - TwinCam
+  - Twincam
   BanksToLoad: []
   LiveUpdatePort: 9264
-  EnableMemoryTracking: 0
