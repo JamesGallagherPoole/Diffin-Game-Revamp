@@ -14,6 +14,7 @@ public class GreenDieselMode : MonoBehaviour
     public DiffCamButton diffCamButton;
     public GameObject greenDieselXtraModeObject;
     public GreenDieselMode greenDieselXtraMode;
+    public GameObject screenGlow;
     [HideInInspector] public bool commentaryOngoing = false;
 
     private GradientColorKey[] colorKey;
@@ -97,7 +98,9 @@ public class GreenDieselMode : MonoBehaviour
         soundtrack.startGreenDieselXtraMode();
         //StartCoroutine(gameCamera.Shake(.2f, .5f));
         car.maxSpeed = 240;
+        gameCamera.gdmXtraOn = true;
         setGreenSmoke();
+        screenGlow.SetActive(true);
         isCounting = false;
     }
 
@@ -106,9 +109,11 @@ public class GreenDieselMode : MonoBehaviour
     }
 
     public void reset() {
+        screenGlow.SetActive(false);
         timerCounter = 0;
         isAvailable = false;
-        isCounting = false;
+        gameCamera.gdmXtraOn = false;
+        isCounting = true;
         button.interactable = false;
         resetSmoke();
     }

@@ -9,6 +9,9 @@ public class GameCamera : MonoBehaviour
     public Transform inCarCam;
     public Transform inFrontCam;
     public Transform onWheelCam;
+    public Animator glowAnimator;
+
+    public bool gdmXtraOn = false;
 
     private int shotNumber = 0;
     // Start is called before the first frame update
@@ -20,10 +23,18 @@ public class GameCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gdmXtraOn) {
+            if (shotNumber == 0) {
+                glowAnimator.SetBool("isShotZero", true);
+            } else {
+                glowAnimator.SetBool("isShotZero", false);
+            } 
+        }
+
         if (shotNumber == 1) {
             transform.position = inFrontCam.position;
             transform.rotation = inFrontCam.rotation;
-       } else if (shotNumber == 5) {
+        } else if (shotNumber == 5) {
             transform.position = inCarCam.position;
             transform.rotation = inCarCam.rotation;
         } else if (shotNumber == 8) {
@@ -42,7 +53,15 @@ public class GameCamera : MonoBehaviour
         } else {
             shotNumber = 0;
         }
+
         animator.SetInteger("ShotNumber", shotNumber);
+
+        if (shotNumber == 0) {
+            glowAnimator.SetBool("isShotZero", true);
+        } else {
+            glowAnimator.SetBool("isShotZero", false);
+        }
+
     }
 
     public void resetCamera() {
