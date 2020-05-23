@@ -9,6 +9,7 @@ public class LevelLoader : MonoBehaviour
     public Animator hitConeText;
     public Animator loadingStatsText;
     public StartGame startGameManager;
+    public PointsScreenCounter pointsScreenCounter;
 
     public GameObject gameCamera;
     public GameObject pointsScreenCamera;
@@ -76,6 +77,7 @@ public class LevelLoader : MonoBehaviour
         // Play Animation
         transition.SetTrigger("End");
         hitConeText.SetTrigger("End");
+        pointsScreenCounter.startCount();
     }
 
     IEnumerator LoadingStatsScreen()
@@ -94,5 +96,6 @@ public class LevelLoader : MonoBehaviour
         // Play Animation
         transition.SetTrigger("End");
         loadingStatsText.SetTrigger("End");
+        pointsScreenCounter.startCount();
     }
 }

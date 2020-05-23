@@ -9,6 +9,7 @@ public class DiffAgainButton : MonoBehaviour
     public GameObject gdmXtraButton;
     public GreenDieselMode greenDieselXtraMode;
     public GreenDieselMode greenDieselMode;
+    public GameCamera gameCamera;
 
     [FMODUnity.EventRef]
     public string kingOfTheCone = "";
@@ -27,6 +28,7 @@ public class DiffAgainButton : MonoBehaviour
     }
 
     public void diffAgain() {
+        gameCamera.resetCamera();
         greenDieselXtraMode.reset();
         gdmXtraButton.SetActive(false);
         greenDieselMode.reset();

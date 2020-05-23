@@ -35,12 +35,18 @@ public class GameCamera : MonoBehaviour
     public void startGreenDieselMode() {
         animator.SetTrigger("GreenDieselMode");
     }
+
     public void changeDiffCamShot() {
-            if (shotNumber < 5) {
+        if (shotNumber < 5) {
             shotNumber += 1;
         } else {
             shotNumber = 0;
         }
+        animator.SetInteger("ShotNumber", shotNumber);
+    }
+
+    public void resetCamera() {
+        shotNumber = 0;
         animator.SetInteger("ShotNumber", shotNumber);
     }
 

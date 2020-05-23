@@ -8,7 +8,7 @@
 [WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000024DADF11068 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000024E052A35D8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -21,8 +21,51 @@
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] SoundI::release                          :  (0000024E02424298)
+[LOG] SoundI::release                          :     cone hit (0000024DAB0FFD38)
+[LOG] SoundI::release                          :  (0000024E02424128)
+[LOG] SoundI::release                          :     intro_01 (0000024DAB0FAA58)
+[LOG] SoundI::release                          :  (0000024E02422468)
+[LOG] SoundI::release                          :     intro_02 (0000024DAB0FCE18)
+[LOG] SoundI::release                          :  (0000024DF8A15ED8)
+[LOG] SoundI::release                          :     intro_03 (0000024DAB0FA3D8)
+[LOG] SoundI::release                          :  (0000024E02423FB8)
+[LOG] SoundI::release                          :     intro_04 (0000024DAB100218)
+[LOG] SoundI::release                          :  (0000024E02423E48)
+[LOG] SoundI::release                          :     intro_05 (0000024DAB0FFB98)
+[LOG] SoundI::release                          :  (0000024E024232C8)
+[LOG] SoundI::release                          :     intro_06 (0000024DAB100078)
+[LOG] SoundI::release                          :  (0000024DF8A16048)
+[LOG] SoundI::release                          :     intro_07 (0000024DAB0FF6B8)
+[LOG] SoundI::release                          :  (0000024DF8A15078)
+[LOG] SoundI::release                          :     intro_08 (0000024DAB0FF858)
+[LOG] SoundI::release                          :  (0000024DF8A18E48)
+[LOG] SoundI::release                          :     intro_09 (0000024DAB0FCC78)
+[LOG] SoundI::release                          :  (0000024E02424E18)
+[LOG] SoundI::release                          :     intro_10 (0000024DAB0FA238)
+[LOG] SoundI::release                          :  (0000024E02422B98)
+[LOG] SoundI::release                          :     intro_11 (0000024DAB0FBC38)
+[LOG] SoundI::release                          :  (0000024E02423CD8)
+[LOG] SoundI::release                          :     intro_12 (0000024DAB0FECF8)
+[LOG] SoundI::release                          :  (0000024E02421A58)
+[LOG] SoundI::release                          :     general_01 (0000024DAB0FD2F8)
+[LOG] SoundI::release                          :  (0000024E024235A8)
+[LOG] SoundI::release                          :     Diff (0000024DAB0FEE98)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 

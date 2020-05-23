@@ -11,6 +11,7 @@ public class Car : MonoBehaviour
     public GameObject resetButton;
     public GreenDieselMode greenDieselMode;
     public GreenDieselMode greenDieselXtraMode;
+    public StartGame startGame;
 
     [HideInInspector] public bool diff = false;
 
@@ -229,8 +230,8 @@ public class Car : MonoBehaviour
         {
             if (i > 8.0)
             {
-                // Make sure green diesel mode commentary is not going on
-                if (greenDieselMode.commentaryOngoing == false & greenDieselXtraMode.commentaryOngoing == false) {
+                // Make sure start or green diesel mode commentary is not going on
+                if (startGame.commentaryOngoing == false & greenDieselMode.commentaryOngoing == false & greenDieselXtraMode.commentaryOngoing == false) {
                     hendyEvent.start();
                     isHendyCounterCounting = false;
                     break;

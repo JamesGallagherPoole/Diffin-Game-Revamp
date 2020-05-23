@@ -49,7 +49,6 @@ public class cone : MonoBehaviour
     public void hitConeEndGame() {
         levelLoader.StartHitConeLoadingScreen();
         soundtrack.steadyOnHey();
-        pointsScreenCounter.startCount();
         displayDiffCount.updateDiffCountDisplay();
     }
 

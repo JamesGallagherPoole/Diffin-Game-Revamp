@@ -8,6 +8,7 @@ public class StartGame : MonoBehaviour
     public GameObject gameCamera;
     public GameObject car;
     public GreenDieselMode greenDieselMode;
+    public bool commentaryOngoing = false;
 
     [FMODUnity.EventRef]
     public string diffVoice = "";
@@ -22,11 +23,16 @@ public class StartGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (IsPlaying(diffVoiceEvent)) {
+            commentaryOngoing = true;
+        } else if (commentaryOngoing == true & !IsPlaying(diffVoiceEvent)) {
+            commentaryOngoing = false;
+        }
     }
 
     public void startGame()
     {
+        commentaryOngoing = false;
         menuCamera.SetActive(false);
         gameCamera.SetActive(true);
         car.SetActive(true);
@@ -37,4 +43,11 @@ public class StartGame : MonoBehaviour
     {
         diffVoiceEvent.start();
     }
+
+    bool IsPlaying(FMOD.Studio.EventInstance instance) {
+	    FMOD.Studio.PLAYBACK_STATE state;   
+	    instance.getPlaybackState(out state);
+	    return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
+    } 
+
 }
