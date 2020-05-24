@@ -8,12 +8,15 @@ public class LevelLoader : MonoBehaviour
     public Animator loadingText;
     public Animator hitConeText;
     public Animator loadingStatsText;
+    public Animator instructions;
     public StartGame startGameManager;
     public PointsScreenCounter pointsScreenCounter;
 
     public GameObject gameCamera;
     public GameObject pointsScreenCamera;
     public GameObject inGameUi;
+    public GameObject car;
+    public Car carScript;
 
     public float loadingLength = 1f;
 
@@ -49,6 +52,7 @@ public class LevelLoader : MonoBehaviour
         // Play Animation
         transition.SetTrigger("Start");
         loadingText.SetTrigger("Start");
+        instructions.SetTrigger("Start");
 
         // Wait for transition
         yield return new WaitForSeconds(3);
@@ -57,6 +61,7 @@ public class LevelLoader : MonoBehaviour
         startGameManager.startGame();
 
         // Play Animation
+        instructions.SetTrigger("End");
         transition.SetTrigger("End");
         loadingText.SetTrigger("End");
     }
@@ -66,13 +71,15 @@ public class LevelLoader : MonoBehaviour
         // Play Animation
         transition.SetTrigger("Start");
         hitConeText.SetTrigger("Start");
+        inGameUi.SetActive(false);
+        carScript.disableCar();
+        car.SetActive(false);
 
         // Wait for transition
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
 
         gameCamera.SetActive(false);
         pointsScreenCamera.SetActive(true);
-        inGameUi.SetActive(false);
 
         // Play Animation
         transition.SetTrigger("End");
@@ -85,13 +92,15 @@ public class LevelLoader : MonoBehaviour
         // Play Animation
         transition.SetTrigger("Start");
         loadingStatsText.SetTrigger("Start");
+        inGameUi.SetActive(false);
+        carScript.disableCar();
+        car.SetActive(false);
 
         // Wait for transition
         yield return new WaitForSeconds(3);
 
         gameCamera.SetActive(false);
         pointsScreenCamera.SetActive(true);
-        inGameUi.SetActive(false);
 
         // Play Animation
         transition.SetTrigger("End");

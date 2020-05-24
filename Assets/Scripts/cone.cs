@@ -14,6 +14,7 @@ public class cone : MonoBehaviour
     public PointsScreenCounter pointsScreenCounter;
     public DisplayDiffCount displayDiffCount;
     public LevelLoader levelLoader;
+    public BoxCollider boxCollider;
 
     [FMODUnity.EventRef]
     public string ladsJeer = "";
@@ -40,6 +41,7 @@ public class cone : MonoBehaviour
         //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.name == "CarPhysics")
         {
+            boxCollider.enabled = false;
             ladsJeerEvent.start();
             hitConeEndGame();
             Debug.Log("COLLIDED!!");
@@ -54,6 +56,7 @@ public class cone : MonoBehaviour
 
     public void Reset()
     {
+        boxCollider.enabled = true;
         transform.position = originalPosition;
         transform.rotation = originalRotation;
         rigidbody.isKinematic = true;

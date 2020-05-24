@@ -12,6 +12,7 @@ public class Car : MonoBehaviour
     public GreenDieselMode greenDieselMode;
     public GreenDieselMode greenDieselXtraMode;
     public StartGame startGame;
+    public GameObject carObject;
 
     [HideInInspector] public bool diff = false;
 
@@ -240,8 +241,16 @@ public class Car : MonoBehaviour
         }
     }
 
+    public void disableCar() {
+        diff = false; 
+        currentSpeed = 0;
+        rigidBody.isKinematic = true;
+        rigidBody.isKinematic = false;
+    }
+
     public void reset()
     {
+        carObject.SetActive(true);
         transform.position = originalPosition;
         transform.rotation = originalRotation;
         carPhysics.transform.position = originalPhysicsPosition;
@@ -250,7 +259,6 @@ public class Car : MonoBehaviour
         rigidBody.isKinematic = false;
         isGreenDieselMode = false;
         maxSpeed = 180;
-        
     }
     bool IsPlaying(FMOD.Studio.EventInstance instance) {
 	    FMOD.Studio.PLAYBACK_STATE state;   

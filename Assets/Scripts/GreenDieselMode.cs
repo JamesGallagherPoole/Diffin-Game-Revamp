@@ -49,7 +49,7 @@ public class GreenDieselMode : MonoBehaviour
     {
         if (car.diff == true & isCounting)
         {
-            timerCounter += Time.deltaTime*20;
+            timerCounter += Time.deltaTime*3;
             animator.SetFloat("GreenDieselTank", timerCounter);
         }
 
