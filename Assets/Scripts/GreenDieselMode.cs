@@ -83,7 +83,6 @@ public class GreenDieselMode : MonoBehaviour
         diffCamButton.startGreenDieselMode();
         gameCamera.startGreenDieselMode();
         //StartCoroutine(gameCamera.Shake(1f, 1f));
-        greenDieselXtraModeObject.SetActive(true);
         greenDieselXtraMode.startCounting();
         isCounting = false;
     }
@@ -91,7 +90,6 @@ public class GreenDieselMode : MonoBehaviour
     public void engageGreenDieselXtraMode()
     {
         button.interactable = false;
-        animator.SetBool("GDM_XTRA", true);
         animator.SetFloat("GreenDieselTank", 85f);
         greenDieselEngageEvent.start();
         greenDieselHendyEvent.start();
