@@ -97,7 +97,7 @@ public class LevelLoader : MonoBehaviour
         car.SetActive(false);
 
         // Wait for transition
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
 
         gameCamera.SetActive(false);
         pointsScreenCamera.SetActive(true);

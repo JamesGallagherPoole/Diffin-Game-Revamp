@@ -49,7 +49,7 @@ public class GreenDieselMode : MonoBehaviour
     {
         if (car.diff == true & isCounting)
         {
-            timerCounter += Time.deltaTime*3;
+            timerCounter += Time.deltaTime*4;
             animator.SetFloat("GreenDieselTank", timerCounter);
         }
 
@@ -111,7 +111,6 @@ public class GreenDieselMode : MonoBehaviour
         timerCounter = 0;
         isAvailable = false;
         gameCamera.gdmXtraOn = false;
-        isCounting = true;
         button.interactable = false;
         resetSmoke();
     }

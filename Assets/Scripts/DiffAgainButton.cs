@@ -31,7 +31,6 @@ public class DiffAgainButton : MonoBehaviour
     public void diffAgain() {
         gameCamera.resetCamera();
         greenDieselXtraMode.reset();
-        gdmXtraButton.SetActive(false);
         greenDieselMode.reset();
         greenDieselMode.startCounting();
         pointsScreenCounter.endCount();

@@ -16,7 +16,13 @@ public class DiffButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     // Update is called once per frame
     void Update()
     {
-        
+       if (Input.GetKeyDown("space")) {
+           diffinCarScript.getDiffin();
+       }
+
+       if (Input.GetKeyUp("space")) {
+           diffinCarScript.haltDiffin();
+       }
     }
 
     public void OnPointerDown(PointerEventData eventData)
