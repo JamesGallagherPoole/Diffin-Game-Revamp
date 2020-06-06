@@ -7,6 +7,7 @@ public class DiffAgainButton : MonoBehaviour
     public Score score;
     public PointsScreenCounter pointsScreenCounter;
     public GameObject gdmXtraButton;
+    public DiffCamButton diffCamButton;
     public GreenDieselMode greenDieselXtraMode;
     public GreenDieselMode greenDieselMode;
     public DiffCounter diffCounter;
@@ -32,6 +33,7 @@ public class DiffAgainButton : MonoBehaviour
         gameCamera.resetCamera();
         greenDieselXtraMode.reset();
         greenDieselMode.reset();
+        diffCamButton.reset();
         greenDieselMode.startCounting();
         pointsScreenCounter.endCount();
         kingOfTheConeEvent.start();

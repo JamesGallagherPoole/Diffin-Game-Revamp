@@ -24,6 +24,10 @@ public class DiffCamButton : MonoBehaviour
 
     }
 
+    public void reset() {
+        button.interactable = false;
+    }
+
     public void startGreenDieselMode() {
         button.interactable = true;
         animator.SetBool("GreenDieselMode", true);

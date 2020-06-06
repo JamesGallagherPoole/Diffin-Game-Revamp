@@ -31,13 +31,13 @@ public class GameCamera : MonoBehaviour
             } 
         }
 
-        if (shotNumber == 1) {
+        if (shotNumber == 8) {
             transform.position = inFrontCam.position;
             transform.rotation = inFrontCam.rotation;
-        } else if (shotNumber == 5) {
+        } else if (shotNumber == 7) {
             transform.position = inCarCam.position;
             transform.rotation = inCarCam.rotation;
-        } else if (shotNumber == 8) {
+        } else if (shotNumber == 3) {
             transform.position = onWheelCam.position;
             transform.rotation = onWheelCam.rotation;
         }
@@ -48,7 +48,7 @@ public class GameCamera : MonoBehaviour
     }
 
     public void changeDiffCamShot() {
-        if (shotNumber < 5) {
+        if (shotNumber < 8) {
             shotNumber += 1;
         } else {
             shotNumber = 0;
