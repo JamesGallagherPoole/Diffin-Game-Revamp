@@ -111,22 +111,22 @@ public class Car : MonoBehaviour
             Handheld.Vibrate(); // GWAN TA FUCK
             // Accelerate
             if (currentSpeed < maxSpeed) {
-                currentSpeed += 2;
+                currentSpeed += 1.5f;
             }
 
             // Rotate car based on phone rotation
-            if (Input.acceleration.x > 0) {
+            if (Input.acceleration.x > 0 | Input.GetKey("right")) {
                 if (currentRotate < maxRotate )
                 {
                     currentRotate += 1;
                 }
                 transform.Rotate(0, 1, 0);
-            } else if (Input.acceleration.x < 0) {
+            } else if (Input.acceleration.x < 0 | Input.GetKey("left")) {
                 if (currentRotate > -maxRotate)
                 {
                     currentRotate -= 1;
                 }
-                transform.Rotate(0, -1, 0);
+                transform.Rotate(0, -1f, 0);
             }
 
             /*
@@ -169,7 +169,6 @@ public class Car : MonoBehaviour
             {
                 var routine = StartCoroutine(startCommentaryTimer());
             }
-
         } else if (diff == false) {
             if (currentSpeed > 0) {
                 currentSpeed -= 3;

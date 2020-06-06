@@ -6480,7 +6480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &306645600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7307,7 +7307,7 @@ WheelCollider:
     targetPosition: 1
   m_SuspensionDistance: 0.02
   m_ForceAppPointDistance: 0
-  m_Mass: 100
+  m_Mass: 10000
   m_WheelDampingRate: 1
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -9507,7 +9507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &836388245
 Transform:
   m_ObjectHideFlags: 0
@@ -9516,7 +9516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836388244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.5, y: -65.3, z: -685.2}
+  m_LocalPosition: {x: 45.5, y: -65.3, z: -690.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5006512736216943146}
@@ -10455,7 +10455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016101797}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.178, y: -0.337, z: 0.103}
+  m_LocalPosition: {x: -0.178, y: -0.337, z: 0.078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1594127625}
@@ -10476,7 +10476,7 @@ WheelCollider:
     targetPosition: 1
   m_SuspensionDistance: 0.02
   m_ForceAppPointDistance: 0
-  m_Mass: 100
+  m_Mass: 10000
   m_WheelDampingRate: 1
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -10552,7 +10552,7 @@ WheelCollider:
     targetPosition: 1
   m_SuspensionDistance: 0.02
   m_ForceAppPointDistance: 0
-  m_Mass: 100
+  m_Mass: 10000
   m_WheelDampingRate: 1
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -11833,7 +11833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 128, y: 395}
+  m_AnchoredPosition: {x: 140, y: 395}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1340724059
@@ -11874,7 +11874,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1340724060}
   m_OnClick:
     m_PersistentCalls:
@@ -13753,6 +13753,7 @@ GameObject:
   - component: {fileID: 1697651398}
   - component: {fileID: 1697651397}
   - component: {fileID: 1697651396}
+  - component: {fileID: 1697651400}
   m_Layer: 5
   m_Name: InGameUI
   m_TagString: Untagged
@@ -13847,6 +13848,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &1697651400
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697651395}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1713791504
 GameObject:
   m_ObjectHideFlags: 0
@@ -14888,7 +14901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 128, y: 96}
+  m_AnchoredPosition: {x: 140, y: 96}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1895056231
@@ -15423,7 +15436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 128, y: 242}
+  m_AnchoredPosition: {x: 140, y: 242}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1963278106
@@ -15587,7 +15600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969864070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.227, y: -0.335, z: 0.092}
+  m_LocalPosition: {x: 0.227, y: -0.335, z: 0.074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1594127625}
@@ -15608,7 +15621,7 @@ WheelCollider:
     targetPosition: 1
   m_SuspensionDistance: 0.02
   m_ForceAppPointDistance: 0
-  m_Mass: 100
+  m_Mass: 10000
   m_WheelDampingRate: 0.2
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
