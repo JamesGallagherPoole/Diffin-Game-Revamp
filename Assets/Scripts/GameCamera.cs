@@ -34,7 +34,7 @@ public class GameCamera : MonoBehaviour
         if (shotNumber == 8) {
             transform.position = inFrontCam.position;
             transform.rotation = inFrontCam.rotation;
-        } else if (shotNumber == 7) {
+        } else if (shotNumber == 5) {
             transform.position = inCarCam.position;
             transform.rotation = inCarCam.rotation;
         } else if (shotNumber == 3) {
@@ -48,7 +48,7 @@ public class GameCamera : MonoBehaviour
     }
 
     public void changeDiffCamShot() {
-        if (shotNumber < 8) {
+        if (shotNumber < 5) {
             shotNumber += 1;
         } else {
             shotNumber = 0;

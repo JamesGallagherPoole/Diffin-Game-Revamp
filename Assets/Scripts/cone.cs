@@ -20,11 +20,15 @@ public class cone : MonoBehaviour
     public string ladsJeer = "";
     FMOD.Studio.EventInstance ladsJeerEvent;
 
+    [FMODUnity.EventRef]
+    public string hendyInsult = "";
+    FMOD.Studio.EventInstance hendyInsultEvent;
 
     // Start is called before the first frame update
     void Start()
     {
         ladsJeerEvent = FMODUnity.RuntimeManager.CreateInstance(ladsJeer);
+        hendyInsultEvent = FMODUnity.RuntimeManager.CreateInstance(hendyInsult);
         originalPosition = transform.position;
         originalRotation = transform.rotation;
     }
@@ -43,6 +47,7 @@ public class cone : MonoBehaviour
         {
             boxCollider.enabled = false;
             ladsJeerEvent.start();
+            hendyInsultEvent.start();
             hitConeEndGame();
             Debug.Log("COLLIDED!!");
         }
