@@ -112,6 +112,7 @@ public class GreenDieselMode : MonoBehaviour
         isAvailable = false;
         gameCamera.gdmXtraOn = false;
         button.interactable = false;
+        isCounting = false;
         resetSmoke();
     }
 

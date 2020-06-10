@@ -222,11 +222,12 @@ public class Car : MonoBehaviour
     private IEnumerator startCommentaryTimer()
     {
         isHendyCounterCounting = true;
-        for (float i = 0; i <= 9.0f; i += Time.deltaTime)
+        for (float i = 0; i <= 7.0f; i += Time.deltaTime)
         {
-            if (i > 8.0)
+            if (i > 6.0)
             {
                 // Make sure start or green diesel mode commentary is not going on
+                Debug.Log(greenDieselMode.commentaryOngoing);
                 if (startGame.commentaryOngoing == false & greenDieselMode.commentaryOngoing == false & greenDieselXtraMode.commentaryOngoing == false) {
                     hendyEvent.start();
                     isHendyCounterCounting = false;
@@ -257,6 +258,7 @@ public class Car : MonoBehaviour
         rigidBody.isKinematic = true;
         rigidBody.isKinematic = false;
         isGreenDieselMode = false;
+        var routine = StartCoroutine(startCommentaryTimer());
         maxSpeed = 180;
     }
     bool IsPlaying(FMOD.Studio.EventInstance instance) {
